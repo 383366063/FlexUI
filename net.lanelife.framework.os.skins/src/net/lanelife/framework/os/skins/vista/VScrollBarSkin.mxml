@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+This file is part of LANE WEBOS
+
+Copyright (c) 2011 LANE WEBOS
+
+Contact:  http://www.lanelife.org/contact
+
+GNU General Public License Usage
+This file may be used under the terms of the GNU General Public License version 2.0 as published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.  Please review the following information to ensure the GNU General Public License version 2.0 requirements will be met: http://www.gnu.org/copyleft/gpl.html.
+
+If you are unsure which license is appropriate for your use, please contact the sales department at http://www.lanelife.org/contact.
+
+-->
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx">
+	<!-- host component -->
+	<fx:Metadata>
+		[HostComponent("spark.components.VScrollBar")]
+	</fx:Metadata>
+	
+	<!-- states -->
+	<s:states>
+		<s:State name="inactive" />
+		<s:State name="disabled" />
+		<s:State name="normal" />
+	</s:states>
+	
+	
+	<s:Rect top="0" bottom="0" left="0" right="0" minWidth="14" minHeight="14" radiusX="1">
+		<s:stroke>
+			<s:SolidColorStroke color="#e3e3e3"/>
+		</s:stroke>
+		<s:fill>
+			<s:SolidColor color="#f1f0ee" />
+		</s:fill>
+	</s:Rect>
+	
+	<s:Button id="track" top="19" bottom="19" height="54"
+			  focusEnabled="false"
+			  skinClass="net.lanelife.framework.os.skins.vista.VScrollBarTrackSkin" />
+	
+	<s:Button id="thumb" 
+			  focusEnabled="false" visible.inactive="false"
+			  skinClass="net.lanelife.framework.os.skins.vista.VScrollBarThumbSkin" />
+	
+	<s:Button id="decrementButton" top="0" enabled.inactive="false"
+			  focusEnabled="false" 
+			  skinClass="net.lanelife.framework.os.skins.vista.ScrollBarUpButtonSkin" />
+	
+	<s:Button id="incrementButton" bottom="0" enabled.inactive="false"
+			  focusEnabled="false" 
+			  skinClass="net.lanelife.framework.os.skins.vista.ScrollBarDownButtonSkin" />
+
+	
+	<!-- SkinParts
+	name=incrementButton, type=spark.components.Button, required=false
+	name=track, type=spark.components.Button, required=false
+	name=thumb, type=spark.components.Button, required=false
+	name=decrementButton, type=spark.components.Button, required=false
+	-->
+</s:Skin>

@@ -1,0 +1,23 @@
+package net.lanelife.framework.os.components
+{
+	import flash.display.StageDisplayState;
+	import flash.events.MouseEvent;
+	
+	import mx.core.FlexGlobals;
+	
+	import spark.components.Button;
+	
+	public class FullScreenButton extends Button
+	{
+		public function FullScreenButton()
+		{
+			super();
+			this.addEventListener(MouseEvent.CLICK, function(event:MouseEvent):void{
+				if (FlexGlobals.topLevelApplication.stage.displayState==StageDisplayState.NORMAL)
+					FlexGlobals.topLevelApplication.stage.displayState = StageDisplayState.FULL_SCREEN;
+				else
+					FlexGlobals.topLevelApplication.stage.displayState = StageDisplayState.NORMAL;
+			});
+		}
+	}
+}

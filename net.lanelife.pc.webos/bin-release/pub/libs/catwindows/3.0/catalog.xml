@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="4.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="net/lanelife/framework/catwindows/events/WindowEvent" mod="1313244785138" signatureChecksum="73913643" >
+        <def id="net.lanelife.framework.catwindows.events:WindowEvent" /> 
+        <dep id="net.lanelife.framework.catwindows.components:Window" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/media/SystemSound_dingSound" mod="1313237212249" signatureChecksum="4178037217" >
+        <def id="net.lanelife.framework.catwindows.media:SystemSound_dingSound" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:SoundAsset" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/components/Window" mod="1313244767888" signatureChecksum="506755148" >
+        <def id="net.lanelife.framework.catwindows.components:Window" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:WindowManager" type="e" /> 
+        <dep id="spark.effects:Scale" type="e" /> 
+        <dep id="flash.geom:Rectangle" type="e" /> 
+        <dep id="Math" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.events:WindowEvent" type="e" /> 
+        <dep id="spark.effects:Fade" type="e" /> 
+        <dep id="flash.geom:Point" type="e" /> 
+        <dep id="mx.events:SandboxMouseEvent" type="e" /> 
+        <dep id="mx.collections:ArrayCollection" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.components:Dimension" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.media:SystemSound" type="e" /> 
+        <dep id="flash.events:EventDispatcher" type="e" /> 
+        <dep id="flash.events:MouseEvent" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:CursorMgr" type="e" /> 
+        <dep id="mx.events:MenuEvent" type="e" /> 
+        <dep id="mx.core:FlexGlobals" type="e" /> 
+        <dep id="mx.controls:Menu" type="e" /> 
+        <dep id="mx.effects:Parallel" type="e" /> 
+        <dep id="spark.effects:Rotate3D" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:WindowManager" type="s" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="spark.effects:Scale" type="s" /> 
+        <dep id="spark.components:Image" type="s" /> 
+        <dep id="flash.geom:Rectangle" type="s" /> 
+        <dep id="flash.display:InteractiveObject" type="s" /> 
+        <dep id="spark.components:Button" type="s" /> 
+        <dep id="spark.components:Group" type="s" /> 
+        <dep id="spark.effects:Fade" type="s" /> 
+        <dep id="flash.geom:Point" type="s" /> 
+        <dep id="mx.collections:ArrayCollection" type="s" /> 
+        <dep id="net.lanelife.framework.catwindows.components:Dimension" type="s" /> 
+        <dep id="flash.events:EventDispatcher" type="s" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="mx.events:MenuEvent" type="s" /> 
+        <dep id="spark.components:BorderContainer" type="s" /> 
+        <dep id="mx.controls:Menu" type="s" /> 
+        <dep id="flash.display:DisplayObject" type="s" /> 
+        <dep id="mx.effects:Parallel" type="s" /> 
+        <dep id="spark.core:IDisplayText" type="s" /> 
+        <dep id="spark.effects:Rotate3D" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="spark.components:SkinnableContainer" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/components/MessageBox" mod="1313244757471" signatureChecksum="2801997081" >
+        <def id="net.lanelife.framework.catwindows.components:MessageBox" /> 
+        <dep id="flash.ui:Keyboard" type="e" /> 
+        <dep id="flash.events:MouseEvent" type="e" /> 
+        <dep id="flash.events:KeyboardEvent" type="e" /> 
+        <dep id="mx.core:FlexGlobals" type="e" /> 
+        <dep id="mx.graphics:SolidColor" type="e" /> 
+        <dep id="spark.components:BorderContainer" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.events:WindowEvent" type="e" /> 
+        <dep id="mx.events:CloseEvent" type="e" /> 
+        <dep id="spark.components:Button" type="e" /> 
+        <dep id="mx.events:FlexEvent" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="flash.geom:Point" type="e" /> 
+        <dep id="spark.components:Label" type="s" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="flash.events:KeyboardEvent" type="s" /> 
+        <dep id="spark.components:Image" type="s" /> 
+        <dep id="mx.graphics:SolidColor" type="s" /> 
+        <dep id="spark.components:BorderContainer" type="s" /> 
+        <dep id="net.lanelife.framework.catwindows.events:WindowEvent" type="s" /> 
+        <dep id="mx.events:CloseEvent" type="s" /> 
+        <dep id="spark.components:Button" type="s" /> 
+        <dep id="mx.events:FlexEvent" type="s" /> 
+        <dep id="flash.geom:Point" type="s" /> 
+        <dep id="spark.components:HGroup" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="net.lanelife.framework.catwindows.components:Window" type="i" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/managers/CursorMgr_EW" mod="1313237212119" signatureChecksum="3663839595" >
+        <def id="net.lanelife.framework.catwindows.managers:CursorMgr_EW" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:BitmapAsset" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/components/TrayIcon" mod="1313244762826" signatureChecksum="3326661197" >
+        <def id="net.lanelife.framework.catwindows.components:TrayIcon" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:TrayIconManager" type="e" /> 
+        <dep id="flash.utils:Timer" type="e" /> 
+        <dep id="flash.events:TimerEvent" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:TrayIconManager" type="s" /> 
+        <dep id="flash.utils:Timer" type="s" /> 
+        <dep id="flash.events:TimerEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="spark.components:Button" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/managers/TrayIconManager" mod="1313244795289" signatureChecksum="3181033591" >
+        <def id="net.lanelife.framework.catwindows.managers:TrayIconManager" /> 
+        <dep id="mx.collections:ArrayCollection" type="e" /> 
+        <dep id="mx.collections:ArrayCollection" type="s" /> 
+        <dep id="net.lanelife.framework.catwindows.components:TrayIcon" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/managers/CursorMgr_NESW" mod="1313237212089" signatureChecksum="2450375955" >
+        <def id="net.lanelife.framework.catwindows.managers:CursorMgr_NESW" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:BitmapAsset" type="i" /> 
+      </script>
+      <script name="_07511098c425efe1507d3b42b9426011d92235bdabccba420e41490281329891_flash_display_Sprite" mod="1313246403209" signatureChecksum="2427746229" >
+        <def id="_07511098c425efe1507d3b42b9426011d92235bdabccba420e41490281329891_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/managers/CursorMgr_NWSE" mod="1313237212099" signatureChecksum="2344273165" >
+        <def id="net.lanelife.framework.catwindows.managers:CursorMgr_NWSE" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:BitmapAsset" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/managers/CursorMgr" mod="1313244790338" signatureChecksum="3274366384" >
+        <def id="net.lanelife.framework.catwindows.managers:CursorMgr" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:CursorMgr_NS" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:CursorMgr_NWSE" type="e" /> 
+        <dep id="mx.managers:CursorManagerPriority" type="e" /> 
+        <dep id="mx.managers:CursorManager" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:CursorMgr_NESW" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:CursorMgr_EW" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/media/SystemSound" mod="1313244808599" signatureChecksum="4267525583" >
+        <def id="net.lanelife.framework.catwindows.media:SystemSound" /> 
+        <dep id="mx.core:SoundAsset" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.media:SystemSound_dingSound" type="e" /> 
+        <dep id="mx.core:SoundAsset" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/managers/CursorMgr_NS" mod="1313237212109" signatureChecksum="3744776577" >
+        <def id="net.lanelife.framework.catwindows.managers:CursorMgr_NS" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:BitmapAsset" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/managers/WindowManager" mod="1313244800671" signatureChecksum="1999955069" >
+        <def id="net.lanelife.framework.catwindows.managers:WindowManager" /> 
+        <dep id="mx.collections:ArrayCollection" type="e" /> 
+        <dep id="Date" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.events:WindowEvent" type="e" /> 
+        <dep id="mx.collections:ArrayCollection" type="s" /> 
+        <dep id="net.lanelife.framework.catwindows.components:Window" type="s" /> 
+        <dep id="net.lanelife.framework.catwindows.events:WindowEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/events/TrayIconEvent" mod="1313244779651" signatureChecksum="3243397068" >
+        <def id="net.lanelife.framework.catwindows.events:TrayIconEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/components/Dimension" mod="1313244750935" signatureChecksum="2498771682" >
+        <def id="net.lanelife.framework.catwindows.components:Dimension" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="dd2ef74633e8d3d3f005e1f05cc31bfae03ffb776a8325bf38b2c171a62b8f1c"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

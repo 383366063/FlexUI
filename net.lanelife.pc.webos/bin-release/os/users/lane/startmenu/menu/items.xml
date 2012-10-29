@@ -1,0 +1,12 @@
+﻿<item>
+	<name>主题设置</name>
+	<application>os/software/net/lanelife/pc/webos/soft/theme/application.xml</application>
+</item>
+<item>
+	<name>帮助和支持</name>
+	<application>os/software/net/lanelife/pc/webos/soft/help/application.xml</application>
+</item>
+<item>
+	<name>关于</name>
+	<application>os/software/net/lanelife/pc/webos/soft/about/application.xml</application>
+</item>

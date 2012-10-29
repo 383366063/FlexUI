@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="4.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="net/lanelife/framework/utils/X" mod="1313246083021" signatureChecksum="2906074312" >
+        <def id="net.lanelife.framework.utils:X" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/utils/ProgressBar" mod="1313246034999" signatureChecksum="3009786536" >
+        <def id="net.lanelife.framework.utils:ProgressBar" /> 
+        <dep id="mx.events:SandboxMouseEvent" type="e" /> 
+        <dep id="mx.managers:PopUpManager" type="e" /> 
+        <dep id="spark.effects:Scale" type="e" /> 
+        <dep id="flash.events:MouseEvent" type="e" /> 
+        <dep id="mx.core:FlexGlobals" type="e" /> 
+        <dep id="flash.geom:Rectangle" type="e" /> 
+        <dep id="mx.effects:Parallel" type="e" /> 
+        <dep id="Math" type="e" /> 
+        <dep id="spark.effects:Fade" type="e" /> 
+        <dep id="spark.components:Label" type="s" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="spark.effects:Scale" type="s" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="flash.events:ProgressEvent" type="s" /> 
+        <dep id="flash.geom:Rectangle" type="s" /> 
+        <dep id="flash.display:DisplayObject" type="s" /> 
+        <dep id="mx.effects:Parallel" type="s" /> 
+        <dep id="spark.components:Button" type="s" /> 
+        <dep id="spark.effects:Fade" type="s" /> 
+        <dep id="spark.components:Group" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="spark.components:SkinnableContainer" type="i" /> 
+      </script>
+      <script name="_f6700d9b53ccced971b5ea5d872c07aec8ced4bcac44f319e29bcc2f62c24778_flash_display_Sprite" mod="1313246409116" signatureChecksum="1022131423" >
+        <def id="_f6700d9b53ccced971b5ea5d872c07aec8ced4bcac44f319e29bcc2f62c24778_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/utils/SWFLoaderUtil" mod="1313246038299" signatureChecksum="3653633171" >
+        <def id="net.lanelife.framework.utils:SWFLoaderUtil" /> 
+        <dep id="net.lanelife.framework.utils:WtModuleLoader" type="e" /> 
+        <dep id="net.lanelife.framework.utils:ProgressBar" type="e" /> 
+        <dep id="net.lanelife.framework.os.core:SystemContext" type="e" /> 
+        <dep id="flash.events:ProgressEvent" type="e" /> 
+        <dep id="mx.controls:SWFLoader" type="e" /> 
+        <dep id="mx.events:ModuleEvent" type="e" /> 
+        <dep id="flash.system:LoaderContext" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="net.lanelife.framework.utils:ProgressBar" type="s" /> 
+        <dep id="flash.events:ProgressEvent" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="mx.controls:SWFLoader" type="s" /> 
+        <dep id="mx.events:ModuleEvent" type="s" /> 
+        <dep id="flash.system:ApplicationDomain" type="s" /> 
+        <dep id="flash.system:LoaderContext" type="s" /> 
+        <dep id="spark.modules:ModuleLoader" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/utils/WtModuleLoader" mod="1313246041357" signatureChecksum="1280137604" >
+        <def id="net.lanelife.framework.utils:WtModuleLoader" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="spark.modules:ModuleLoader" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="df25b365592495f2aadee564d8d24277bb12fcc69630aed710391af5119c7e58"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

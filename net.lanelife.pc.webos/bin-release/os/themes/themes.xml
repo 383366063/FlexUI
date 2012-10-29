@@ -1,0 +1,13 @@
+﻿<item>
+	<name>vista</name>
+	<pic>os/themes/vista/skin.png</pic>
+	<swf>os/themes/vista/vista.swf</swf>
+	<chromeColor>0xffffff</chromeColor>
+</item>
+
+<item>
+	<name>rainbow</name>
+	<pic>os/themes/rainbow/skin.png</pic>
+	<swf>os/themes/rainbow/rainbow.swf</swf>
+	<chromeColor>0x009fea</chromeColor>
+</item>

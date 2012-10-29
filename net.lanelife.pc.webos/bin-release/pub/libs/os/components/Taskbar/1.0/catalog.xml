@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="4.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="net/lanelife/framework/os/components/StartButton" mod="1313245254417" signatureChecksum="2369816989" >
+        <def id="net.lanelife.framework.os.components:StartButton" /> 
+        <dep id="flash.events:MouseEvent" type="e" /> 
+        <dep id="mx.core:FlexGlobals" type="e" /> 
+        <dep id="net.lanelife.framework.os.components.events:StartMenuEvent" type="e" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="spark.components:ToggleButton" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/TrayIconPopUpContainer" mod="1313245272650" signatureChecksum="2360951061" >
+        <def id="net.lanelife.framework.os.components:TrayIconPopUpContainer" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="spark.components:BorderContainer" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/SystemTime" mod="1313245286872" signatureChecksum="237768326" >
+        <def id="net.lanelife.framework.os.components:SystemTime" /> 
+        <dep id="spark.components:Label" type="e" /> 
+        <dep id="mx.formatters:DateFormatter" type="e" /> 
+        <dep id="Date" type="e" /> 
+        <dep id="mx.binding:Binding" type="e" /> 
+        <dep id="flash.utils:Timer" type="e" /> 
+        <dep id="_net_lanelife_framework_os_components_SystemTimeWatcherSetupUtil" type="e" /> 
+        <dep id="flash.utils:getDefinitionByName" type="e" /> 
+        <dep id="flash.events:TimerEvent" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="mx.binding:BindingManager" type="e" /> 
+        <dep id="spark.components:Label" type="s" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="mx.formatters:DateFormatter" type="s" /> 
+        <dep id="flash.utils:Timer" type="s" /> 
+        <dep id="flash.events:TimerEvent" type="s" /> 
+        <dep id="mx.events:FlexEvent" type="s" /> 
+        <dep id="mx.binding:IWatcherSetupUtil2" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="mx.binding:IBindingClient" type="i" /> 
+        <dep id="spark.components:Group" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/TaskbarButtonContainer" mod="1313245291435" signatureChecksum="237768326" >
+        <def id="net.lanelife.framework.os.components:TaskbarButtonContainer" /> 
+        <dep id="spark.layouts:TileLayout" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="mx.binding:BindingManager" type="e" /> 
+        <dep id="net.lanelife.framework.os.components:TaskbarButtonContainerScroller" type="e" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="spark.layouts:TileLayout" type="s" /> 
+        <dep id="net.lanelife.framework.os.components:TaskbarButtonContainerScroller" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="spark.components:Group" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/TaskbarContainer" mod="1313245296606" signatureChecksum="237768326" >
+        <def id="net.lanelife.framework.os.components:TaskbarContainer" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="spark.components:SkinnableContainer" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/TrayIconContainer" mod="1313245300937" signatureChecksum="237768326" >
+        <def id="net.lanelife.framework.os.components:TrayIconContainer" /> 
+        <dep id="net.lanelife.framework.catwindows.events:TrayIconEvent" type="e" /> 
+        <dep id="spark.effects:Scale" type="e" /> 
+        <dep id="spark.components:TileGroup" type="e" /> 
+        <dep id="spark.effects:Fade" type="e" /> 
+        <dep id="spark.layouts:HorizontalLayout" type="e" /> 
+        <dep id="mx.binding:BindingManager" type="e" /> 
+        <dep id="flash.events:MouseEvent" type="e" /> 
+        <dep id="net.lanelife.framework.os.components:TrayIconPopUpContainer" type="e" /> 
+        <dep id="_net_lanelife_framework_os_components_TrayIconContainerWatcherSetupUtil" type="e" /> 
+        <dep id="mx.binding:Binding" type="e" /> 
+        <dep id="mx.core:FlexGlobals" type="e" /> 
+        <dep id="spark.components:PopUpAnchor" type="e" /> 
+        <dep id="mx.effects:Parallel" type="e" /> 
+        <dep id="flash.utils:getDefinitionByName" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="net.lanelife.framework.os.components:TrayIconContainerArrowButton" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="spark.effects:Scale" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="spark.components:TileGroup" type="s" /> 
+        <dep id="net.lanelife.framework.catwindows.components:TrayIcon" type="s" /> 
+        <dep id="spark.effects:Fade" type="s" /> 
+        <dep id="spark.layouts:HorizontalLayout" type="s" /> 
+        <dep id="mx.binding:IWatcherSetupUtil2" type="s" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="net.lanelife.framework.os.components:TrayIconPopUpContainer" type="s" /> 
+        <dep id="spark.components:PopUpAnchor" type="s" /> 
+        <dep id="mx.effects:Parallel" type="s" /> 
+        <dep id="mx.events:FlexEvent" type="s" /> 
+        <dep id="net.lanelife.framework.os.components:TrayIconContainerArrowButton" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="mx.binding:IBindingClient" type="i" /> 
+        <dep id="spark.components:Group" type="i" /> 
+      </script>
+      <script name="_net_lanelife_framework_os_components_SystemTimeWatcherSetupUtil" mod="1313246411455" signatureChecksum="5308497" >
+        <def id="_net_lanelife_framework_os_components_SystemTimeWatcherSetupUtil" /> 
+        <dep id="mx.binding:PropertyWatcher" type="e" /> 
+        <dep id="net.lanelife.framework.os.components:SystemTime" type="e" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+        <dep id="mx.binding:IWatcherSetupUtil2" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/StartMenu" mod="1313245280890" signatureChecksum="237768326" >
+        <def id="net.lanelife.framework.os.components:StartMenu" /> 
+        <dep id="mx.core:DeferredInstanceFromFunction" type="e" /> 
+        <dep id="spark.effects:Fade" type="e" /> 
+        <dep id="mx.binding:BindingManager" type="e" /> 
+        <dep id="_net_lanelife_framework_os_components_StartMenuWatcherSetupUtil" type="e" /> 
+        <dep id="spark.components:Label" type="e" /> 
+        <dep id="mx.collections:ArrayCollection" type="e" /> 
+        <dep id="mx.rpc.http.mxml:HTTPService" type="e" /> 
+        <dep id="flash.events:MouseEvent" type="e" /> 
+        <dep id="mx.binding:Binding" type="e" /> 
+        <dep id="net.lanelife.framework.os.components:StartButton" type="e" /> 
+        <dep id="flash.utils:getDefinitionByName" type="e" /> 
+        <dep id="net.lanelife.framework.os.core:ApplicationManager" type="e" /> 
+        <dep id="net.lanelife.framework.os.components:StartMenuButton" type="e" /> 
+        <dep id="net.lanelife.framework.os.components.events:StartMenuEvent" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="spark.components:Label" type="s" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="mx.collections:ArrayCollection" type="s" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="mx.rpc.http.mxml:HTTPService" type="s" /> 
+        <dep id="mx.rpc.events:ResultEvent" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="mx.events:FlexEvent" type="s" /> 
+        <dep id="net.lanelife.framework.os.components:StartMenuButton" type="s" /> 
+        <dep id="spark.effects:Fade" type="s" /> 
+        <dep id="mx.binding:IWatcherSetupUtil2" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="mx.binding:IBindingClient" type="i" /> 
+        <dep id="spark.components:SkinnableContainer" type="i" /> 
+      </script>
+      <script name="_net_lanelife_framework_os_components_TrayIconContainerWatcherSetupUtil" mod="1313246411469" signatureChecksum="5308497" >
+        <def id="_net_lanelife_framework_os_components_TrayIconContainerWatcherSetupUtil" /> 
+        <dep id="net.lanelife.framework.os.components:TrayIconContainer" type="e" /> 
+        <dep id="mx.binding:PropertyWatcher" type="e" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+        <dep id="mx.binding:IWatcherSetupUtil2" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/TaskbarButtonContainerScroller" mod="1313245262777" signatureChecksum="680870521" >
+        <def id="net.lanelife.framework.os.components:TaskbarButtonContainerScroller" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="spark.components:Scroller" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/events/StartMenuEvent" mod="1313245248629" signatureChecksum="4258746792" >
+        <def id="net.lanelife.framework.os.components.events:StartMenuEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="_net_lanelife_framework_os_components_StartMenuWatcherSetupUtil" mod="1313246411402" signatureChecksum="5308497" >
+        <def id="_net_lanelife_framework_os_components_StartMenuWatcherSetupUtil" /> 
+        <dep id="mx.binding:PropertyWatcher" type="e" /> 
+        <dep id="net.lanelife.framework.os.components:StartMenu" type="e" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+        <dep id="mx.binding:IWatcherSetupUtil2" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/FullScreenButton" mod="1313245251435" signatureChecksum="1680560918" >
+        <def id="net.lanelife.framework.os.components:FullScreenButton" /> 
+        <dep id="flash.events:MouseEvent" type="e" /> 
+        <dep id="mx.core:FlexGlobals" type="e" /> 
+        <dep id="flash.display:StageDisplayState" type="e" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="spark.components:Button" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/TrayIconContainerArrowButton" mod="1313245269477" signatureChecksum="799294453" >
+        <def id="net.lanelife.framework.os.components:TrayIconContainerArrowButton" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="spark.components:ToggleButton" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/StartMenuButton" mod="1313245259315" signatureChecksum="2700558778" >
+        <def id="net.lanelife.framework.os.components:StartMenuButton" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="spark.components:Button" type="i" /> 
+      </script>
+      <script name="_130287c52074dc0210f97bee08c565f407c48eaa44892b211a22fa76ae605588_flash_display_Sprite" mod="1313246411629" signatureChecksum="525957275" >
+        <def id="_130287c52074dc0210f97bee08c565f407c48eaa44892b211a22fa76ae605588_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/TaskbarButtonContainerVScrollBar" mod="1313245265861" signatureChecksum="2551736536" >
+        <def id="net.lanelife.framework.os.components:TaskbarButtonContainerVScrollBar" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="spark.core:IViewport" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="spark.components:VScrollBar" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="2edd88f5f6f2ea75bf0061f4cee456bbed3c4d372b0247f222ec6998bdc0d797"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

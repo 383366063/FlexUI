@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="4.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="net/lanelife/framework/os/components/ScreenNavigatorButton" mod="1313245231172" signatureChecksum="2573100789" >
+        <def id="net.lanelife.framework.os.components:ScreenNavigatorButton" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="spark.components:Button" type="i" /> 
+      </script>
+      <script name="_c20e235b7086ae2c5b23849fb17155005590281f93dc26d8ce39eefea4e99c3a_flash_display_Sprite" mod="1313246407174" signatureChecksum="636779069" >
+        <def id="_c20e235b7086ae2c5b23849fb17155005590281f93dc26d8ce39eefea4e99c3a_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/ScreenNavigator" mod="1313245227902" signatureChecksum="464816491" >
+        <def id="net.lanelife.framework.os.components:ScreenNavigator" /> 
+        <dep id="net.lanelife.framework.os.components:ScreenNavigatorButton" type="e" /> 
+        <dep id="mx.collections:ArrayCollection" type="e" /> 
+        <dep id="flash.events:MouseEvent" type="e" /> 
+        <dep id="net.lanelife.framework.os.core:SystemContext" type="e" /> 
+        <dep id="mx.events:FlexEvent" type="e" /> 
+        <dep id="spark.effects:Rotate3D" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="net.lanelife.framework.os.components:ScreenNavigatorButton" type="s" /> 
+        <dep id="mx.collections:ArrayCollection" type="s" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="mx.events:FlexEvent" type="s" /> 
+        <dep id="spark.effects:Rotate3D" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="spark.components:SkinnableContainer" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="c6f1fd37560a18780d8e9bb5cad5940b839316cabb8b12e858424c7c458a86a9"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

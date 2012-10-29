@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx"
+		width="{(hostComponent.style=='date'?215:375)}" height="270" xmlns:datetime="org.lanelife.framework.components.datetime.*">
+	<!-- host component -->
+	<fx:Metadata>
+		[HostComponent("org.lanelife.framework.components.datetime.DatetimePicker")]
+	</fx:Metadata>
+	
+	<fx:Declarations>
+		<mx:DateFormatter id="df" formatString="YYYY-MM-DD"/>
+	</fx:Declarations>
+	
+	<s:transitions>
+		<s:Transition fromState="days" toState="months">
+			<s:Wipe direction="down" duration="300" target="{monthsGroup}"/>
+		</s:Transition>
+		<!--<s:Transition fromState="months" toState="days">
+			<s:Wipe direction="up" duration="200" target="{monthsGroup}" disableLayout="true"/>
+		</s:Transition>-->
+		<s:Transition fromState="months" toState="years">
+			<s:Wipe direction="down" duration="300" target="{yearsGroup}"/>
+		</s:Transition>
+		<!--<s:Transition fromState="years" toState="months">
+			<s:Wipe direction="up" duration="200" target="{yearsGroup}" disableLayout="true"/>
+		</s:Transition>-->
+	</s:transitions>
+	
+	<!-- states -->
+	<s:states>
+		<s:State name="disabled" />
+		<s:State name="normal" />
+		<s:State name="days" />
+		<s:State name="months" />
+		<s:State name="years" />
+	</s:states>
+	
+	<s:Rect left="0" right="0" top="0" bottom="0" radiusX="4">
+		<s:filters>
+			<s:GlowFilter color="#000000" blurX="10" blurY="10" quality="3" strength="2" alpha="0.20"/>
+		</s:filters>
+		<s:fill>
+			<s:LinearGradient rotation="90">
+				<s:GradientEntry color="#e5e5e5"/>
+				<s:GradientEntry color="#fdfdfd"/>
+			</s:LinearGradient>
+		</s:fill>
+	</s:Rect>
+	
+	<s:HGroup width="100%" height="100%" gap="0">
+		<s:Group width="215" height="100%">
+			<s:Rect left="0" right="0" top="0" bottom="0" radiusX="4">
+				<s:filters>
+					<s:GlowFilter color="#000000" blurX="10" blurY="10" quality="3" strength="2" alpha="0.18"/>
+				</s:filters>
+				<s:fill>
+					<s:LinearGradient rotation="90">
+						<s:GradientEntry color="#e5e5e5"/>
+						<s:GradientEntry color="#fdfdfd"/>
+					</s:LinearGradient>
+				</s:fill>
+			</s:Rect>
+			
+			<s:VGroup width="100%" height="100%" gap="0">
+				<s:HGroup gap="0" depth="100">
+					<s:Button id="prevMonthButton" width="54" height="25" skinClass="org.lanelife.framework.skins.datetime.PrevMonthButtonSkin"
+							  label.days="{(hostComponent.month==0?12:hostComponent.month)+'月'}"
+							  label.months="{(hostComponent.year-1).toString()}"
+							  enabled.years="false"/>
+					<s:Button id="yearMonthButton" width="107" height="25" skinClass="org.lanelife.framework.skins.datetime.YearMonthButtonSkin"
+							  label.days="{hostComponent.year+'年'+(hostComponent.month+1)+'月'}"
+							  label.months="{hostComponent.year.toString()}"
+							  label.years="{hostComponent.pageYears.getItemAt(0)+'-'+hostComponent.pageYears.getItemAt(11)}"
+							  enabled.years="false"/>
+					<s:Button id="nextMonthButton" width="54" height="25" skinClass="org.lanelife.framework.skins.datetime.NextMonthButtonSkin"
+							  label.days="{(hostComponent.month==11?1:hostComponent.month+2)+'月'}"
+							  label.months="{(hostComponent.year+1).toString()}"
+							  enabled.years="false"/>
+				</s:HGroup>
+				
+				<s:Group width="100%" height="100%" includeIn="days">
+					<s:Rect left="-1" right="-1" height="25">
+						<s:filters>
+							<s:GlowFilter color="#000000" blurX="10" blurY="10" quality="3" strength="2" alpha="0.10"/>
+						</s:filters>
+						<s:fill>
+							<s:LinearGradient rotation="90">
+								<s:GradientEntry color="#fbfbfb"/>
+								<s:GradientEntry color="#f7f7f7"/>
+							</s:LinearGradient>
+						</s:fill>
+					</s:Rect>
+					<s:HGroup gap="0" horizontalCenter="0" height="25" verticalAlign="middle">
+						<s:Label text="{hostComponent.weeks.getItemAt(0)}" width="30" textAlign="center" fontFamily="微软雅黑" fontSize="14"/>
+						<s:Label text="{hostComponent.weeks.getItemAt(1)}" width="30" textAlign="center" fontFamily="微软雅黑" fontSize="14"/>
+						<s:Label text="{hostComponent.weeks.getItemAt(2)}" width="30" textAlign="center" fontFamily="微软雅黑" fontSize="14"/>
+						<s:Label text="{hostComponent.weeks.getItemAt(3)}" width="30" textAlign="center" fontFamily="微软雅黑" fontSize="14"/>
+						<s:Label text="{hostComponent.weeks.getItemAt(4)}" width="30" textAlign="center" fontFamily="微软雅黑" fontSize="14"/>
+						<s:Label text="{hostComponent.weeks.getItemAt(5)}" width="30" textAlign="center" fontFamily="微软雅黑" fontSize="14"/>
+						<s:Label text="{hostComponent.weeks.getItemAt(6)}" width="30" textAlign="center" fontFamily="微软雅黑" fontSize="14"/>
+					</s:HGroup>
+					<s:TileGroup id="daysTileGroup" requestedRowCount="6" requestedColumnCount="7" horizontalCenter="0" verticalCenter="0" verticalGap="-1" horizontalGap="-1"/>
+					<s:HGroup bottom="3" horizontalCenter="0">
+						<s:Button id="confirmButton" label="确定" skinClass="org.lanelife.framework.skins.datetime.DatetimePickerButtonSkin"/>
+						<s:Button id="clearButton" label="清空" skinClass="org.lanelife.framework.skins.datetime.DatetimePickerButtonSkin"/>
+						<s:Button id="todayButton" label="今天" skinClass="org.lanelife.framework.skins.datetime.DatetimePickerButtonSkin"/>
+					</s:HGroup>
+				</s:Group>
+				
+				<s:Group id="monthsGroup" width="100%" height="100%" includeIn="months">
+					<s:Rect left="-1" right="-1" top="0" bottom="0">
+						<s:filters>
+							<s:GlowFilter color="#000000" blurX="10" blurY="10" quality="3" strength="2" alpha="0.10"/>
+						</s:filters>
+						<s:fill>
+							<s:LinearGradient rotation="90">
+								<s:GradientEntry color="#fbfbfb"/>
+								<s:GradientEntry color="#f7f7f7"/>
+							</s:LinearGradient>
+						</s:fill>
+					</s:Rect>
+					<s:TileGroup id="monthsTileGroup" requestedRowCount="4" requestedColumnCount="3" horizontalCenter="0" verticalCenter="0"/>
+				</s:Group>
+				
+				<s:Group id="yearsGroup" width="100%" height="100%" includeIn="years">
+					<s:Rect left="-1" right="-1" top="0" bottom="0">
+						<s:filters>
+							<s:GlowFilter color="#000000" blurX="10" blurY="10" quality="3" strength="2" alpha="0.10"/>
+						</s:filters>
+						<s:fill>
+							<s:LinearGradient rotation="90">
+								<s:GradientEntry color="#fbfbfb"/>
+								<s:GradientEntry color="#f7f7f7"/>
+							</s:LinearGradient>
+						</s:fill>
+					</s:Rect>
+					<s:Button id="prevPageYearsButton" enabled="{hostComponent.yearIndex!=0}" skinClass="org.lanelife.framework.skins.datetime.PrevPageYearsButtonSkin" horizontalCenter="0" top="20"/>
+					<s:TileGroup id="yearsTileGroup" requestedRowCount="4" requestedColumnCount="3" horizontalCenter="0" verticalCenter="0"/>
+					<s:Button id="nextPageYearsButton" enabled="{hostComponent.yearIndex!=hostComponent.years.length-1}" skinClass="org.lanelife.framework.skins.datetime.NextPageYearsButtonSkin" horizontalCenter="0" bottom="20"/>
+				</s:Group>
+			</s:VGroup>
+			
+			
+		</s:Group>
+		
+		<s:Group width="100%" height="100%" visible="{hostComponent.style=='datetime'}" includeInLayout="{hostComponent.style=='datetime'}">
+			<datetime:TimePicker id="timePicker" top="15" horizontalCenter="0"/>
+			<s:Label text="{df.format(hostComponent.selectedDate)} {hostComponent.week}" fontFamily="微软雅黑" fontSize="14" color="#2b2b2b" horizontalCenter="0" top="185"/>
+			<!--未经作者本人同意，删除或隐藏以下“蓝易实验室  www.lanelife.org”字样的，全家死光光，出门被车撞死，生孩子没屁眼，祖坟被人挖，如果非要去掉，请联系作者QQ：86760178-->
+			<s:Label text="蓝易实验室  www.lanelife.org" fontFamily="微软雅黑" fontSize="12" color="#cdcdcd" horizontalCenter="0" bottom="20"/>
+		</s:Group>
+		
+	</s:HGroup>
+	
+</s:Skin>

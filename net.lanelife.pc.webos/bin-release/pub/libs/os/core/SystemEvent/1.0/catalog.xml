@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_402bdcb56d8cf89624d5f46583ce4bbcf3ed09b037ecad05e396e46ff4468c08_flash_display_Sprite" mod="1313246405940" signatureChecksum="2113895383" >
+        <def id="_402bdcb56d8cf89624d5f46583ce4bbcf3ed09b037ecad05e396e46ff4468c08_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/core/SystemEvent" mod="1313245388921" signatureChecksum="3735905366" >
+        <def id="net.lanelife.framework.os.core:SystemEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="81877c90633882f519417befb27829177235edb861e65807a5c7e1833597838a"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

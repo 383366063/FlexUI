@@ -1,0 +1,44 @@
+package net.lanelife.framework.os.components
+{
+	import flash.events.MouseEvent;
+	
+	import mx.core.FlexGlobals;
+	
+	import net.lanelife.framework.os.components.events.StartMenuEvent;
+	import net.lanelife.framework.os.core.ScreenContext;
+	
+	import spark.components.ToggleButton;
+	
+	public class StartButton extends ToggleButton
+	{
+		
+		public var screenContext:ScreenContext;
+		
+		public function StartButton()
+		{
+			super();
+			this.addEventListener(MouseEvent.CLICK, function(event:MouseEvent):void{
+				FlexGlobals.topLevelApplication.parent.addEventListener(MouseEvent.MOUSE_DOWN, parent_mouseDownHandler);
+				screenContext.raiseEvent(StartMenuEvent.SHOW);
+				screenContext.observer(StartMenuEvent.HIDE, hideStartMenu, true);
+			});
+			
+		}
+		
+		
+		private function hideStartMenu():void {
+			this.selected = false;
+		}
+		
+		
+		public static var display:Boolean = false;
+		
+		private function parent_mouseDownHandler(event:MouseEvent):void
+		{
+			if (!display) {
+				FlexGlobals.topLevelApplication.parent.removeEventListener(MouseEvent.MOUSE_DOWN, parent_mouseDownHandler);
+				screenContext.raiseEvent(StartMenuEvent.HIDE);
+			}
+		}
+	}
+}

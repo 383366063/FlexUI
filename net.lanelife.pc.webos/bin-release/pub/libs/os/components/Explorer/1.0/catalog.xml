@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="4.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_7a2c62defa2da0bb9bc87da1c1e55202f4075c8671730056ed09edc37a59ab99_flash_display_Sprite" mod="1313246404266" signatureChecksum="700545855" >
+        <def id="_7a2c62defa2da0bb9bc87da1c1e55202f4075c8671730056ed09edc37a59ab99_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/Explorer" mod="1313245211995" signatureChecksum="237768326" >
+        <def id="net.lanelife.framework.os.components:Explorer" /> 
+        <dep id="mx.collections:ArrayCollection" type="e" /> 
+        <dep id="flash.events:MouseEvent" type="e" /> 
+        <dep id="mx.rpc.http.mxml:HTTPService" type="e" /> 
+        <dep id="mx.binding:Binding" type="e" /> 
+        <dep id="flash.utils:getDefinitionByName" type="e" /> 
+        <dep id="mx.events:FlexEvent" type="e" /> 
+        <dep id="net.lanelife.framework.os.components:ExplorerItem" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="_net_lanelife_framework_os_components_ExplorerWatcherSetupUtil" type="e" /> 
+        <dep id="mx.binding:BindingManager" type="e" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="mx.collections:ArrayCollection" type="s" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="mx.rpc.http.mxml:HTTPService" type="s" /> 
+        <dep id="mx.rpc.events:ResultEvent" type="s" /> 
+        <dep id="mx.events:ResizeEvent" type="s" /> 
+        <dep id="mx.events:FlexEvent" type="s" /> 
+        <dep id="net.lanelife.framework.os.components:ExplorerItem" type="s" /> 
+        <dep id="mx.binding:IWatcherSetupUtil2" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="mx.binding:IBindingClient" type="i" /> 
+        <dep id="spark.components:SkinnableContainer" type="i" /> 
+      </script>
+      <script name="_net_lanelife_framework_os_components_ExplorerWatcherSetupUtil" mod="1313246404218" signatureChecksum="5308497" >
+        <def id="_net_lanelife_framework_os_components_ExplorerWatcherSetupUtil" /> 
+        <dep id="mx.binding:PropertyWatcher" type="e" /> 
+        <dep id="net.lanelife.framework.os.components:Explorer" type="e" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+        <dep id="mx.binding:IWatcherSetupUtil2" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/ExplorerItem" mod="1313245218435" signatureChecksum="3296872738" >
+        <def id="net.lanelife.framework.os.components:ExplorerItem" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="spark.components:Button" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="a454520c15598c6e69699347321aa028c8017c21d5f3da6fc58ce8886e83a8a9"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

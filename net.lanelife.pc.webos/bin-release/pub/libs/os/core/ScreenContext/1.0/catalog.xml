@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="4.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="net/lanelife/framework/os/core/ScreenContext" mod="1313245351308" signatureChecksum="2647994165" >
+        <def id="net.lanelife.framework.os.core:ScreenContext" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:WindowManager" type="e" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="Math" type="e" /> 
+        <dep id="mx.logging:Log" type="e" /> 
+        <dep id="flash.system:ApplicationDomain" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="mx.logging.targets:TraceTarget" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:TrayIconManager" type="e" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenEvent" type="e" /> 
+        <dep id="mx.utils:ObjectUtil" type="e" /> 
+        <dep id="Date" type="e" /> 
+        <dep id="mx.core:FlexGlobals" type="e" /> 
+        <dep id="flash.utils:getDefinitionByName" type="e" /> 
+        <dep id="flash.utils:IExternalizable" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="flash.utils:Dictionary" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:WindowManager" type="s" /> 
+        <dep id="mx.logging.targets:TraceTarget" type="s" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:TrayIconManager" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenEvent" type="s" /> 
+        <dep id="mx.logging:ILogger" type="s" /> 
+        <dep id="flash.utils:Dictionary" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.utils:ObjectProxy" type="i" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/core/ScreenContainer" mod="1313245360744" signatureChecksum="3179875305" >
+        <def id="net.lanelife.framework.os.core:ScreenContainer" /> 
+        <dep id="spark.primitives:Rect" type="e" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="flash.net:URLRequest" type="e" /> 
+        <dep id="mx.graphics:GradientEntry" type="e" /> 
+        <dep id="Math" type="e" /> 
+        <dep id="flash.events:IOErrorEvent" type="e" /> 
+        <dep id="flash.display:Loader" type="e" /> 
+        <dep id="spark.effects:Fade" type="e" /> 
+        <dep id="mx.binding:BindingManager" type="e" /> 
+        <dep id="mx.graphics:BitmapFill" type="e" /> 
+        <dep id="spark.components:Label" type="e" /> 
+        <dep id="_net_lanelife_framework_os_core_ScreenContainerWatcherSetupUtil" type="e" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenEvent" type="e" /> 
+        <dep id="flash.events:ProgressEvent" type="e" /> 
+        <dep id="mx.binding:Binding" type="e" /> 
+        <dep id="mx.graphics:SolidColor" type="e" /> 
+        <dep id="mx.graphics:LinearGradient" type="e" /> 
+        <dep id="flash.utils:getDefinitionByName" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="spark.primitives:Rect" type="s" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="mx.graphics:GradientEntry" type="s" /> 
+        <dep id="flash.events:IOErrorEvent" type="s" /> 
+        <dep id="flash.display:Loader" type="s" /> 
+        <dep id="spark.effects:Fade" type="s" /> 
+        <dep id="mx.binding:IWatcherSetupUtil2" type="s" /> 
+        <dep id="mx.graphics:BitmapFill" type="s" /> 
+        <dep id="spark.components:Label" type="s" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="flash.events:ProgressEvent" type="s" /> 
+        <dep id="mx.graphics:LinearGradient" type="s" /> 
+        <dep id="mx.graphics:SolidColor" type="s" /> 
+        <dep id="mx.events:FlexEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="mx.binding:IBindingClient" type="i" /> 
+        <dep id="spark.components:Group" type="i" /> 
+      </script>
+      <script name="_net_lanelife_framework_os_core_ScreenContainerWatcherSetupUtil" mod="1313246405234" signatureChecksum="5308497" >
+        <def id="_net_lanelife_framework_os_core_ScreenContainerWatcherSetupUtil" /> 
+        <dep id="mx.binding:PropertyWatcher" type="e" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContainer" type="e" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+        <dep id="mx.binding:IWatcherSetupUtil2" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/core/ScreenEvent" mod="1313245354283" signatureChecksum="758149578" >
+        <def id="net.lanelife.framework.os.core:ScreenEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="_5d4ad4d04338b39ee38b610a1f72a32b69a4910224b5dfa50cdd2b12a230c420_flash_display_Sprite" mod="1313246405310" signatureChecksum="197818825" >
+        <def id="_5d4ad4d04338b39ee38b610a1f72a32b69a4910224b5dfa50cdd2b12a230c420_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="f8b5d66126225d8c46cb3ff763bf9b940396c84762acfa9033b86850391f65cb"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

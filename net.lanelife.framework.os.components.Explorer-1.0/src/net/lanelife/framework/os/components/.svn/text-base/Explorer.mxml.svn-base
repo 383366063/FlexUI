@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					  xmlns:s="library://ns.adobe.com/flex/spark" 
+					  xmlns:mx="library://ns.adobe.com/flex/mx"
+					  creationComplete="init(event)"
+					  resize="explorer_resizeHandler(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			import mx.events.ResizeEvent;
+			import mx.rpc.events.ResultEvent;
+			
+			[Bindable]
+			public var source:Object;
+			
+			
+			private var items:ArrayCollection = new ArrayCollection();
+			private var itemLoadCount:Number = 0;
+			
+			protected function httpservice1_resultHandler(event:ResultEvent):void
+			{
+				var ac:ArrayCollection = event.result.item;
+				
+				for(var i:Number=0; i<ac.length; i++)
+				{
+					var item:ExplorerItem = new ExplorerItem();
+					
+					item.label = ac[i].name;
+					item.icon = ac[i].icon;
+					item.application = ac[i].application;
+					
+					
+					item.visible = false;
+					
+					this.addElement(item);
+					this.items.addItem(item);
+					
+					item.doubleClickEnabled = true;
+					item.addEventListener(MouseEvent.DOUBLE_CLICK, item_doubleClickHandler);
+					item.addEventListener(FlexEvent.CREATION_COMPLETE, item_completeHandler);
+					
+				}
+			}
+			
+			private function item_completeHandler(event:FlexEvent):void
+			{
+				itemLoadCount ++;
+				
+				if (itemLoadCount==this.items.length)
+				{
+					compositionItems();
+				}
+				
+			}
+			
+			
+			private function compositionItems():void
+			{
+				var xT:Number, yT:Number;
+				var k:int,j:int=0;
+				for(var i:Number=0; i<items.length; i++)
+				{
+					var item:ExplorerItem = items[i];
+					xT=(item.width+10)*j;
+					yT=(item.height+10)*k;
+					xT=xT<0?0:xT;
+					yT=yT<0?0:yT;
+					if (xT > this.width){
+						xT=this.width - item.width;
+					}
+					if (yT+item.height>this.height){
+						j++;
+						k=0;
+						xT=(item.width+10)*j;
+						yT=(item.height+10)*k;
+					}
+					item.x=xT;
+					item.y=yT; 
+					k++;
+					item.visible = true;
+				}
+			}
+			
+			
+			private function item_doubleClickHandler(event:MouseEvent):void
+			{
+				var item:ExplorerItem = event.target as ExplorerItem;
+				
+				open(item);
+				
+			}
+			
+			
+			public function open(item:ExplorerItem):void
+			{
+				
+			}
+			
+			
+			protected function explorer_resizeHandler(event:ResizeEvent):void
+			{
+				compositionItems();
+			}
+			
+			protected function init(event:FlexEvent):void
+			{
+				service.send();
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<s:HTTPService id="service" url="{source}" 
+					   result="httpservice1_resultHandler(event)"/>
+	</fx:Declarations>
+</s:SkinnableContainer>

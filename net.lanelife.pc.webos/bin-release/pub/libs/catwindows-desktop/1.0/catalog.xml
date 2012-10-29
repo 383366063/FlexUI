@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="4.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="net/lanelife/framework/catwindows/desktop/components/DesktopWindow" mod="1313244829565" signatureChecksum="2174895854" >
+        <def id="net.lanelife.framework.catwindows.desktop.components:DesktopWindow" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:WindowManager" type="e" /> 
+        <dep id="net.lanelife.framework.os.core:SystemContext" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.desktop.components:TaskbarButton" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.events:WindowEvent" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:WindowManager" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="net.lanelife.framework.catwindows.desktop.components:TaskbarButton" type="s" /> 
+        <dep id="net.lanelife.framework.catwindows.events:WindowEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="net.lanelife.framework.catwindows.components:Window" type="i" /> 
+      </script>
+      <script name="_8aa5a0ac2b94f23017d9d4acc6a8f7a07362e36d668316dc36553702b18dcff2_flash_display_Sprite" mod="1313246408068" signatureChecksum="2469165693" >
+        <def id="_8aa5a0ac2b94f23017d9d4acc6a8f7a07362e36d668316dc36553702b18dcff2_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/desktop/components/SystemTrayIcon" mod="1313244833091" signatureChecksum="3217144055" >
+        <def id="net.lanelife.framework.catwindows.desktop.components:SystemTrayIcon" /> 
+        <dep id="net.lanelife.framework.catwindows.events:TrayIconEvent" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.managers:TrayIconManager" type="e" /> 
+        <dep id="net.lanelife.framework.os.core:SystemContext" type="e" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="net.lanelife.framework.catwindows.components:TrayIcon" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/catwindows/desktop/components/TaskbarButton" mod="1313244836279" signatureChecksum="2808294128" >
+        <def id="net.lanelife.framework.catwindows.desktop.components:TaskbarButton" /> 
+        <dep id="spark.effects:Scale" type="e" /> 
+        <dep id="flash.events:MouseEvent" type="e" /> 
+        <dep id="mx.events:PropertyChangeEvent" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.components:Window" type="s" /> 
+        <dep id="spark.effects:Scale" type="s" /> 
+        <dep id="flash.events:MouseEvent" type="s" /> 
+        <dep id="spark.components:Image" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+        <dep id="spark.components:Button" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="bb8250fbcbe4530e8db7d1253e2ae43455a12ea751451a1e8aaa4654c64c8a59"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

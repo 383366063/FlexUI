@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="net/lanelife/framework/os/core/SystemContext" mod="1313245376595" signatureChecksum="599783724" >
+        <def id="net.lanelife.framework.os.core:SystemContext" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="net.lanelife.framework.os.core:SystemEvent" type="e" /> 
+        <dep id="mx.logging:Log" type="e" /> 
+        <dep id="flash.system:ApplicationDomain" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="mx.logging.targets:TraceTarget" type="e" /> 
+        <dep id="flash.utils:getQualifiedClassName" type="e" /> 
+        <dep id="flash.events:EventDispatcher" type="e" /> 
+        <dep id="mx.utils:ObjectUtil" type="e" /> 
+        <dep id="mx.core:FlexGlobals" type="e" /> 
+        <dep id="flash.utils:getDefinitionByName" type="e" /> 
+        <dep id="flash.utils:IExternalizable" type="e" /> 
+        <dep id="flash.utils:Dictionary" type="e" /> 
+        <dep id="mx.logging.targets:TraceTarget" type="s" /> 
+        <dep id="flash.events:EventDispatcher" type="s" /> 
+        <dep id="mx.logging:ILogger" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:SystemEvent" type="s" /> 
+        <dep id="flash.utils:Dictionary" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.utils:ObjectProxy" type="i" /> 
+        <dep id="flash.events:IEventDispatcher" type="i" /> 
+      </script>
+      <script name="_037fd55126155e828e19fc031ee1003aa87d9e2b491eaa70fa5b4db7f2e2f124_flash_display_Sprite" mod="1313246406512" signatureChecksum="1311406701" >
+        <def id="_037fd55126155e828e19fc031ee1003aa87d9e2b491eaa70fa5b4db7f2e2f124_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="87f6739bad04719ab9a0cbb2cb8fa09feef2f97310c59b41dfe11124081e065a"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

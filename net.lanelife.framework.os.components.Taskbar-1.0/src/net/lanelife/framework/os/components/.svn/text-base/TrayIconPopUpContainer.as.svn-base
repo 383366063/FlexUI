@@ -1,0 +1,12 @@
+package net.lanelife.framework.os.components
+{
+	import spark.components.BorderContainer;
+	
+	public class TrayIconPopUpContainer extends BorderContainer
+	{
+		public function TrayIconPopUpContainer()
+		{
+			super();
+		}
+	}
+}

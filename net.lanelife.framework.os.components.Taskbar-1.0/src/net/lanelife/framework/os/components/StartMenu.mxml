@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+This file is part of LANE WEBOS
+
+Copyright (c) 2011 LANE WEBOS
+
+Contact:  http://www.lanelife.org/contact
+
+GNU General Public License Usage
+This file may be used under the terms of the GNU General Public License version 2.0 as published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.  Please review the following information to ensure the GNU General Public License version 2.0 requirements will be met: http://www.gnu.org/copyleft/gpl.html.
+
+If you are unsure which license is appropriate for your use, please contact the sales department at http://www.lanelife.org/contact.
+
+-->
+<s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					  xmlns:s="library://ns.adobe.com/flex/spark" 
+					  xmlns:mx="library://ns.adobe.com/flex/mx" creationComplete="init()" showEffect="{showEffect}" hideEffect="{hideEffect}">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.rpc.events.ResultEvent;
+			
+			import net.lanelife.framework.os.components.events.StartMenuEvent;
+			import net.lanelife.framework.os.core.ApplicationManager;
+			import net.lanelife.framework.os.core.ScreenContext;
+			
+			public var screenContext:ScreenContext;
+			
+			[Bindable]
+			public var source:String;
+			
+			[Bindable]
+			public var face:Object;
+			
+			[Bindable]
+			public var startMenuButtons:ArrayCollection = new ArrayCollection();
+			
+			
+			protected function init():void
+			{
+				this.addEventListener(MouseEvent.MOUSE_OVER,function(e:MouseEvent):void{
+					StartButton.display = true;
+				});
+				this.addEventListener(MouseEvent.MOUSE_OUT,function(e:MouseEvent):void{
+					StartButton.display = false;
+				});
+				
+				screenContext.observer(StartMenuEvent.SHOW, showStartMenu);
+				
+				menuService.send();
+			}
+			
+			private function showStartMenu():void{
+				hideEffect.end();
+				this.visible = true;
+				this.includeInLayout = true;
+				screenContext.observer(StartMenuEvent.HIDE, hideStartMenu, true);
+			}
+			
+			private function hideStartMenu():void {
+				this.visible = false;
+				this.includeInLayout = false;
+			}
+			
+			protected function menuService_resultHandler(event:ResultEvent):void
+			{
+				var ac:ArrayCollection = event.result.item;
+				for(var i:Number=0; i<ac.length; i++)
+				{
+					var button:StartMenuButton = new StartMenuButton();
+					button.label = ac[i].name;
+					button.application = ac[i].application;
+					button.doubleClickEnabled = true;
+					button.addEventListener(MouseEvent.CLICK, menuButton_clickHandler);
+					startMenuButtons.addItem(button);
+				}
+			}
+			
+			private function menuButton_clickHandler(event:MouseEvent):void
+			{
+				var button:StartMenuButton = event.target as StartMenuButton;
+				ApplicationManager.run(button.application, screenContext);
+				
+				screenContext.raiseEvent(StartMenuEvent.HIDE);
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<s:Fade id="showEffect" alphaFrom="0" alphaTo="1"/>
+		<s:Fade id="hideEffect" alphaFrom="1" alphaTo="0"/>
+
+		<s:HTTPService id="menuService" url="{source}" result="menuService_resultHandler(event)"/>
+	</fx:Declarations>
+	<s:Label text="111"/>
+</s:SkinnableContainer>

@@ -1,0 +1,21 @@
+package net.lanelife.framework.os.components
+{
+	import spark.components.Button;
+	
+	public class StartMenuButton extends Button
+	{
+		
+		[Bindable]
+		/**
+		 * 应用配置地址 
+		 * @return 
+		 * 
+		 */
+		public var application:String;
+		
+		public function StartMenuButton()
+		{
+			super();
+		}
+	}
+}

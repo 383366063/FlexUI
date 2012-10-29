@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:components="org.lanelife.framework.components.*" xmlns:datetime="org.lanelife.framework.components.datetime.*">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<datetime:DateField x="10" y="10"/>
+	
+	<datetime:DateField x="400" y="10" selectedDate="{new Date()}" style="datetime" formatString="YYYY-MM-DD JJ:NN:SS"/>
+	 
+	<!--<datetime:DatetimePicker x="100" y="100" style="datetime"/>-->
+</s:Application>

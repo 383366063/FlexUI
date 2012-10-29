@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+This file is part of LANE WEBOS
+
+Copyright (c) 2011 LANE WEBOS
+
+Contact:  http://www.lanelife.org/contact
+
+GNU General Public License Usage
+This file may be used under the terms of the GNU General Public License version 2.0 as published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.  Please review the following information to ensure the GNU General Public License version 2.0 requirements will be met: http://www.gnu.org/copyleft/gpl.html.
+
+If you are unsure which license is appropriate for your use, please contact the sales department at http://www.lanelife.org/contact.
+
+-->
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 creationComplete="init(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			private var timer:Timer = new Timer(1000);
+			
+			protected function init(event:FlexEvent):void
+			{
+				timer.addEventListener(TimerEvent.TIMER, onTimer);
+				timer.start();
+			}
+			
+			private function onTimer(event:TimerEvent):void
+			{
+				datetime.text = dateFormat.format(new Date());
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<mx:DateFormatter id="dateFormat" formatString="YYYY-MM-DD JJ:NN:SS" />
+	</fx:Declarations>
+	
+	<s:Label id="datetime" color="#ffffff" text="{dateFormat.format(new Date())}" verticalCenter="0" />
+	
+</s:Group>

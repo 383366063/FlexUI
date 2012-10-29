@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+This file is part of LANE WEBOS
+
+Copyright (c) 2011 LANE WEBOS
+
+Contact:  http://www.lanelife.org/contact
+
+GNU General Public License Usage
+This file may be used under the terms of the GNU General Public License version 2.0 as published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.  Please review the following information to ensure the GNU General Public License version 2.0 requirements will be met: http://www.gnu.org/copyleft/gpl.html.
+
+If you are unsure which license is appropriate for your use, please contact the sales department at http://www.lanelife.org/contact.
+
+-->
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx" width="320" height="390">
+	<!-- host component -->
+	<fx:Metadata>
+		[HostComponent("net.lanelife.framework.os.components.StartMenu")]
+	</fx:Metadata>
+	
+	<!-- states -->
+	<s:states>
+		<s:State name="disabled" />
+		<s:State name="normal" />
+	</s:states>
+	
+	
+	<!--边框-->
+	<s:Rect top="0" bottom="0" left="0" right="0" radiusX="4">
+		<s:filters>
+			<s:GlowFilter blurX="2" blurY="2" quality="3" color="#000000"/>
+		</s:filters>
+		<s:stroke>
+			<s:SolidColorStroke color="#000000"/>
+		</s:stroke>
+		<s:fill>
+			<s:SolidColor color="#ffffff" alpha="0.27"/>
+		</s:fill>
+	</s:Rect>
+	
+	<!--高亮边框-->
+	<s:Rect top="1" bottom="1" left="1" right="1" radiusX="4">
+		<s:stroke>
+			<s:SolidColorStroke color="#f2f8fe"/>
+		</s:stroke>
+	</s:Rect>
+	
+	
+	
+	<!--内容背景-->
+	<s:Rect left="6" top="6" right="100" bottom="6" radiusX="1">
+		<s:stroke>
+			<s:SolidColorStroke color="#e1eefc"/>
+		</s:stroke>
+	</s:Rect>
+	<s:Rect left="7" top="7" right="101" bottom="7" radiusX="1">
+		<s:stroke>
+			<s:SolidColorStroke color="#5b6a79"/>
+		</s:stroke>
+		<s:fill>  
+			<s:SolidColor color="#ffffff"/>
+		</s:fill>
+	</s:Rect>
+	
+	
+	<s:Group right="22" top="-30" width="60" height="60" buttonMode="true" useHandCursor="true">
+		<!--边框-->
+		<s:Rect top="0" bottom="0" left="0" right="0" radiusX="7">
+			<s:filters>
+				<s:GlowFilter blurX="2" blurY="2" quality="3" color="#000000"/>
+			</s:filters>
+			<s:stroke>
+				<s:SolidColorStroke color="#000000"/>
+			</s:stroke>
+			<s:fill>
+				<s:SolidColor color="#ffffff" alpha="0.27"/>
+			</s:fill>
+		</s:Rect>
+		<!--高亮边框-->
+		<s:Rect top="1" bottom="1" left="1" right="1" radiusX="7">
+			<s:stroke>
+				<s:SolidColorStroke color="#2abdd8"/>
+			</s:stroke>
+		</s:Rect>
+		
+		<s:Rect left="5" top="5" right="5" bottom="5" radiusX="2">
+			<s:stroke>
+				<s:SolidColorStroke color="#5b6a79"/>
+			</s:stroke>
+			<s:fill>  
+				<s:SolidColor color="#ffffff"/>
+			</s:fill>
+		</s:Rect>
+		
+		<s:Image source="{hostComponent.face}" left="6" top="6" right="6" bottom="6" smooth="true"/>
+	</s:Group>
+	
+	
+	<s:DataGroup right="7" top="50" dataProvider="{hostComponent.startMenuButtons}">
+		<s:layout>
+			<s:VerticalLayout/>
+		</s:layout>
+	</s:DataGroup>
+	
+	
+	<!-- SkinParts
+	name=contentGroup, type=spark.components.Group, required=false
+	-->
+</s:Skin>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="4.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="net/lanelife/framework/os/core/ApplicationManager" mod="1313245341976" signatureChecksum="419085720" >
+        <def id="net.lanelife.framework.os.core:ApplicationManager" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="net.lanelife.framework.catwindows.desktop.components:DesktopWindow" type="e" /> 
+        <dep id="net.lanelife.framework.utils:ProgressBar" type="e" /> 
+        <dep id="flash.events:ProgressEvent" type="e" /> 
+        <dep id="flash.net:URLRequest" type="e" /> 
+        <dep id="mx.core:FlexGlobals" type="e" /> 
+        <dep id="net.lanelife.framework.utils:SWFLoaderUtil" type="e" /> 
+        <dep id="flash.events:IOErrorEvent" type="e" /> 
+        <dep id="flash.net:URLLoader" type="e" /> 
+        <dep id="XML" type="e" /> 
+        <dep id="flash.system:ApplicationDomain" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="net.lanelife.framework.catwindows.desktop.components:DesktopWindow" type="s" /> 
+        <dep id="net.lanelife.framework.utils:ProgressBar" type="s" /> 
+        <dep id="flash.events:ProgressEvent" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="flash.events:IOErrorEvent" type="s" /> 
+        <dep id="flash.net:URLLoader" type="s" /> 
+        <dep id="XML" type="s" /> 
+        <dep id="spark.modules:ModuleLoader" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="_f9f321c6060b9647a9412890232727f689c175e80e64056b441dd265f536597a_flash_display_Sprite" mod="1313246410211" signatureChecksum="242382597" >
+        <def id="_f9f321c6060b9647a9412890232727f689c175e80e64056b441dd265f536597a_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="343cb06b87f91658dac6a63dc56e87836ee870fa16d136a0b98649df8e3ba44d"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

@@ -1,0 +1,25 @@
+package net.lanelife.framework.events
+{
+	import flash.events.Event;
+	
+	public class PreloaderEvent extends Event
+	{
+		
+		public static const PROGRESS:String = "preloaderProgressEvent";
+		public static const ALL_OK:String = "preloaderAllOKEvent";
+		
+		public var message:String;
+		public var bytes:String;
+		public var ticket:String;
+		public var percent:Number;
+		
+		public function PreloaderEvent(type:String, message:String, bytes:String, ticket:String, percent:Number)
+		{
+			super(type);
+			this.message = message;
+			this.bytes = bytes;
+			this.ticket = ticket;
+			this.percent = percent;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.5.1" build="21328" minimumSupportedVersion="4.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="net/lanelife/framework/os/components/DesktopContainer" mod="1313245023631" signatureChecksum="237768326" >
+        <def id="net.lanelife.framework.os.components:DesktopContainer" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="spark.components:SkinnableContainer" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/WindowsContainer" mod="1313245196454" signatureChecksum="237768326" >
+        <def id="net.lanelife.framework.os.components:WindowsContainer" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="spark.components:SkinnableContainer" type="i" /> 
+      </script>
+      <script name="_b3cbd0eccccecfa16632bf6967d13e83d77439f6f5321f399baca145f6f8fc4b_flash_display_Sprite" mod="1313246414146" signatureChecksum="1411415275" >
+        <def id="_b3cbd0eccccecfa16632bf6967d13e83d77439f6f5321f399baca145f6f8fc4b_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="net/lanelife/framework/os/components/DesktopExplorer" mod="1313245191437" signatureChecksum="237768326" >
+        <def id="net.lanelife.framework.os.components:DesktopExplorer" /> 
+        <dep id="net.lanelife.framework.os.core:ApplicationManager" type="e" /> 
+        <dep id="mx.core:IFlexModuleFactory" type="s" /> 
+        <dep id="net.lanelife.framework.os.core:ScreenContext" type="s" /> 
+        <dep id="net.lanelife.framework.os.components:ExplorerItem" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="mx.core:mx_internal" type="n" /> 
+        <dep id="net.lanelife.framework.os.components:Explorer" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="1216320d86cf39777f5c0a144771eaf902f1f61fbf7158ecb9e6ba3123cfae5e"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

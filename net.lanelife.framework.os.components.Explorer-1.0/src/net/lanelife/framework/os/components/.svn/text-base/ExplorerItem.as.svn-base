@@ -1,0 +1,34 @@
+package net.lanelife.framework.os.components
+{
+	import spark.components.Button;
+	
+	/**
+	 * 资源管理器中的项，icon指定项图标，applicationXML指定应用配置地址，label指定项名称
+	 * @author Lane
+	 * 
+	 */
+	public class ExplorerItem extends Button
+	{
+		[Bindable]
+		/**
+		 * 图标 
+		 * @return 
+		 * 
+		 */
+		public var icon:Object;
+		
+		[Bindable]
+		/**
+		 * 应用配置地址 
+		 * @return 
+		 * 
+		 */
+		public var application:String;
+		
+		
+		public function ExplorerItem()
+		{
+			super();
+		}
+	}
+}

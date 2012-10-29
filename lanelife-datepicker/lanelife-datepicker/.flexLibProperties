@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="org.lanelife.framework.components.datetime.DatetimePicker"/>
+    <classEntry path="org.lanelife.framework.skins.datetime.DatetimePickerSkin"/>
+    <classEntry path="org.lanelife.framework.skins.datetime.PrevPageYearsButtonSkin"/>
+    <classEntry path="org.lanelife.framework.skins.datetime.DayButtonSkin"/>
+    <classEntry path="org.lanelife.framework.components.datetime.DateField"/>
+    <classEntry path="org.lanelife.framework.skins.datetime.DateFieldSkin"/>
+  </includeClasses>
+  <includeResources>
+    <resourceEntry destPath="defaults.css" sourcePath="defaults.css"/>
+  </includeResources>
+  <namespaceManifests/>
+</flexLibProperties>

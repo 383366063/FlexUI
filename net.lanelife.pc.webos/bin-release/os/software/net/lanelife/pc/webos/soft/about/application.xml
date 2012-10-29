@@ -1,0 +1,13 @@
+﻿<application>
+	<name>关于</name>
+	<runWith>wrapper</runWith>
+	<title>关于</title>
+	<x>200</x>
+	<y>100</y>
+	<width>528</width>
+	<height>340</height>
+	<minimizable>false</minimizable>
+	<maximizable>false</maximizable>
+	<resizable>false</resizable>
+	<module>os/software/net/lanelife/pc/webos/soft/about/About.swf</module>
+</application>
