@@ -1,0 +1,232 @@
+package net.lanelife.framework.catwindows.managers
+{
+	import mx.collections.ArrayCollection;
+	
+	import net.lanelife.framework.catwindows.components.Window;
+	import net.lanelife.framework.catwindows.events.WindowEvent;
+
+	public class WindowManager
+	{
+		private static var instance:WindowManager;
+		
+		/**
+		 * 窗口管理器集合 
+		 */		
+		public static var windowManagers:ArrayCollection = new ArrayCollection();
+		
+		/**
+		 * 窗口管理器ID 
+		 */		
+		public var id:Number;
+		
+		
+		/**
+		 * 窗口集合 
+		 */
+		public var list:ArrayCollection = new ArrayCollection();
+		
+		/**
+		 * 在前面的窗口
+		 */
+		public var front:Window;
+		
+		public var accessList:Array = new Array();
+		
+		private var zseed:Number = 9000;
+		
+		
+		
+		/**
+		 * 创建一个窗口管理器，管理器拥有窗口集合，可以对窗口深度排序、获得窗口引用等 
+		 * @param id
+		 * 
+		 */
+		public function WindowManager(id:Number)
+		{
+			this.id = id;
+			
+			WindowManager.windowManagers.addItem(this);
+		}
+		
+		
+		public static function getInstance():WindowManager
+		{
+			if (instance==null)
+				instance = new WindowManager(0);
+			return instance;
+		}
+		
+		/**
+		 * 通过id获得窗口管理器 
+		 * @param id
+		 * @return 
+		 * 
+		 */
+		public static function getWindowManager(id:Number=0):WindowManager
+		{
+			for (var i:Number=0; i<WindowManager.windowManagers.length; i++)
+			{
+				if (WindowManager.windowManagers[i].id == id)
+				{
+					return WindowManager.windowManagers[i];
+				}
+			}
+			return null;
+		}
+		
+		
+		/**
+		 * 在 WindowManager 中注册一个窗口。
+		 * @param window 将注册的窗口
+		 * 
+		 */
+		public function register(window:Window):void
+		{
+			if (window.manager)
+			{
+				window.manager.unregister(window);
+			}
+			window.manager = this;
+			list.addItem(window);
+			accessList.push(window);
+			window.addEventListener(WindowEvent.WINDOW_HIDDENED, window_hiddenHandler);
+		}
+		
+		private function window_hiddenHandler(event:WindowEvent):void
+		{
+			activateLast();
+		}
+		
+		/**
+		 * 在 WindowManager 中注销一个窗口。
+		 * @param window 将注销的窗口
+		 * 
+		 */
+		public function unregister(window:Window):void
+		{
+			window.manager = null;
+			if (list.contains(window))
+				list.removeItemAt(list.getItemIndex(window));
+			window.removeEventListener(WindowEvent.WINDOW_HIDDENED, window_hiddenHandler);
+			deleteAccessList(window);
+		}
+		
+		
+		private function deleteAccessList(window:Window):void
+		{
+			for (var i:int=0; i<accessList.length; i++)
+			{
+				if (accessList[i]==window)
+				{
+					accessList.splice(i,1);
+				}
+			}
+		}
+		
+		/**
+		 * 通过id获取窗口引用 
+		 * @param id
+		 * @return 
+		 * 
+		 */		
+		public function get(id:String):Window
+		{
+			for (var i:Number=0; i<list.length; i++)
+			{
+				if (list[i].id == id)
+				{
+					return list[i];
+				}
+			}
+			return null;
+		}
+		
+		
+		/**
+		 * 将窗口置于前端，并可以将其设为焦点 Window。
+		 * @param window
+		 * @return 
+		 * 
+		 */
+		private static var time:Number = 1;
+		public function bringToFront(window:Window):Boolean
+		{
+			if (window!=front) //如果该窗口已经是最前就不用重新排序了
+			{
+				window.lastAccess = new Date().getTime()+time; //设置该窗口最后访问时间
+				time++;
+				orderWindows();
+				return true;
+			}
+			return false;
+		}
+		
+		
+		/**
+		 * 排序窗口 
+		 * 
+		 */
+		private function orderWindows():void
+		{
+			var a:Array = accessList, len:int = a.length;
+			if(len > 0){
+				a.sort(sortWindows); //按最后访问时间排序窗口
+				var seed:Number = a[0].manager.zseed;
+				for(var i:int = 0; i < len; i++){
+					var win:Window = a[i];
+					if(win && win.visible){
+						win.depth = seed + (i*10); //重设每个窗口的深度
+					}
+				}
+			}
+			activateLast(); //设置活动窗口
+		}
+		
+		
+		/**
+		 * 排序窗口 
+		 * @param d1
+		 * @param d2
+		 * @return 
+		 * 
+		 */
+		private function sortWindows(d1:Window,d2:Window):int
+		{
+			return (!d1.lastAccess || d1.lastAccess < d2.lastAccess) ? -1 : 1;
+		}
+		
+		
+		
+		/**
+		 * 设置活动窗口
+		 * 
+		 */
+		private function activateLast():void
+		{
+			for(var i:int = accessList.length-1; i >=0; --i) {
+				if(accessList[i].visible){
+					setActiveWin(accessList[i]); //设置最后访问时间最新的窗口为活动窗口
+					return;
+				}
+			}
+			// none to activate
+			setActiveWin(null);
+		}
+		
+		private function setActiveWin(window:Window):void
+		{
+			if(window != front){ //如果该窗口已经是最前的窗口就不用设置为活动窗口了
+				if(front){
+					front.activated = false; //设置前一个窗口为非活动窗口
+				}
+				front = window; //将该窗口设置为最前
+				//trace(front)
+				if(window){
+					window.activated = true; //设置该窗口为活动窗口
+				}
+			}
+		}
+		
+		
+	}
+}

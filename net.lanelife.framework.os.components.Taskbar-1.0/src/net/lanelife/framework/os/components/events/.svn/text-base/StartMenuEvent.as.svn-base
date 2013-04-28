@@ -1,0 +1,16 @@
+package net.lanelife.framework.os.components.events
+{
+	import flash.events.Event;
+	
+	public class StartMenuEvent extends Event
+	{
+		
+		public static const SHOW:String = "startMenuShow";
+		public static const HIDE:String = "startMenuHide";
+		
+		public function StartMenuEvent(type:String, bubbles:Boolean=false, cancelable:Boolean=false)
+		{
+			super(type, bubbles, cancelable);
+		}
+	}
+}

@@ -1,0 +1,21 @@
+package net.lanelife.framework.os.core
+{
+	import flash.events.Event;
+	
+	public class ScreenEvent extends Event
+	{
+		public static const SCREEN_EVENT:String = "screenEvent";
+		public static const REPLACE_BACKGROUND:String = "replaceBackground";
+		
+		
+		public var params:Array;
+		public var eventObj:*;
+		
+		public function ScreenEvent(type:String,eventObj:*,params:Array, bubbles:Boolean=false, cancelable:Boolean=false, kind:String=null, property:Object=null, oldValue:Object=null, newValue:Object=null, source:Object=null)
+		{
+			super(type, true, false);
+			this.params = params;
+			this.eventObj = eventObj;
+		}
+	}
+}

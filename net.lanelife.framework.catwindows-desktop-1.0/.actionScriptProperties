@@ -9,9 +9,9 @@
           <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/core.swc" useDefaultLinkType="false"/>
         </excludedEntries>
       </libraryPathEntry>
-      <libraryPathEntry kind="3" linkType="1" path="/net.lanelife.framework.catwindows-3.0/bin/net.lanelife.framework.catwindows-3.0.swc" useDefaultLinkType="false"/>
-      <libraryPathEntry kind="3" linkType="1" path="/net.lanelife.framework.os.core.SystemContext-1.0/bin/net.lanelife.framework.os.core.SystemContext-1.0.swc" useDefaultLinkType="false"/>
-      <libraryPathEntry kind="3" linkType="1" path="/net.lanelife.framework.os.core.ScreenContext-1.0/bin/net.lanelife.framework.os.core.ScreenContext-1.0.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="2" path="/net.lanelife.framework.catwindows-3.0/bin/net.lanelife.framework.catwindows-3.0.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="2" path="/net.lanelife.framework.os.core.SystemContext-1.0/bin/net.lanelife.framework.os.core.SystemContext-1.0.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="2" path="/net.lanelife.framework.os.core.ScreenContext-1.0/bin/net.lanelife.framework.os.core.ScreenContext-1.0.swc" useDefaultLinkType="false"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>

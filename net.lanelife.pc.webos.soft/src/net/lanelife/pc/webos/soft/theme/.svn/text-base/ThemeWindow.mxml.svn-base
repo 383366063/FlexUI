@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components:DesktopWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+						  xmlns:s="library://ns.adobe.com/flex/spark" 
+						  xmlns:mx="library://ns.adobe.com/flex/mx" 
+						  xmlns:components="net.lanelife.framework.catwindows.desktop.components.*"
+						  width="748" height="458" x="100" y="50"
+						  title="主题设置"
+						  maximizable="false" resizable="false"
+						  icon="os/software/net/lanelife/pc/webos/soft/theme/icon.png"
+						  creationComplete="init(event)" xmlns:theme="net.lanelife.pc.webos.soft.theme.*">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.core.FlexGlobals;
+			import mx.events.FlexEvent;
+			import mx.events.StyleEvent;
+			import mx.rpc.events.ResultEvent;
+			
+			import net.lanelife.framework.catwindows.components.Window;
+			import net.lanelife.framework.os.core.ScreenEvent;
+			import net.lanelife.framework.utils.ProgressBar;
+			import net.lanelife.pc.webos.soft.theme.skins.ThemeButtonSkin;
+			protected function init(event:FlexEvent):void
+			{
+				themesService.send();
+				backgroundService.send();
+			}
+			
+			protected function colorbutton_clickHandler(event:MouseEvent):void
+			{
+				Window.BACKGROUND_BITMAP = null;
+				Window.CHROME_COLOR = event.target.chromeColor;
+			}
+			
+			
+			
+			
+			[Bindable]
+			private var themeButtons:ArrayCollection = new ArrayCollection();
+			
+			protected function themesService_resultHandler(event:ResultEvent):void
+			{
+				for (var i:int=0; i<event.result.item.length; i++)
+				{
+					var b:ThemeButton = new ThemeButton();
+					b.width = 233;
+					b.height = 150;
+					b.themename = event.result.item[i].name;
+					b.pic = event.result.item[i].pic;
+					b.swf = event.result.item[i].swf;
+					b.chromeColor = event.result.item[i].chromeColor;
+					b.setStyle("skinClass", ThemeButtonSkin);
+					b.addEventListener(MouseEvent.CLICK, themebutton_clickHandler);
+					themeButtons.addItem(b);
+				}
+			}
+			
+			protected function themebutton_clickHandler(event:MouseEvent):void
+			{
+				var tb:ThemeButton = event.target as ThemeButton;
+				
+				var progressBar:ProgressBar = new ProgressBar();
+				
+				var e:IEventDispatcher = FlexGlobals.topLevelApplication.styleManager.loadStyleDeclarations2(tb.swf);
+				
+				var loadingFun:Function = function(pe:ProgressEvent):void{
+					progressBar.progress(pe, "正在加载外观："+tb.themename+"，请稍候...");
+				};
+				
+				var completeFun:Function = function(ce:Event):void{
+					e.removeEventListener(Event.COMPLETE, completeFun);
+					e.removeEventListener(ProgressEvent.PROGRESS, loadingFun);
+					e.removeEventListener(StyleEvent.ERROR, errorFun);
+					Window.CHROME_COLOR = mx.core.Singleton.getInstance("mx.styles::IStyleManager2").getColorName( tb.chromeColor );
+					progressBar.close();
+				};
+				
+				var errorFun:Function = function(ee:StyleEvent):void{
+					e.removeEventListener(Event.COMPLETE, completeFun);
+					e.removeEventListener(ProgressEvent.PROGRESS, loadingFun);
+					e.removeEventListener(StyleEvent.ERROR, errorFun);
+					progressBar.showError("外观："+tb.themename+" 加载失败");
+				};
+				
+				e.addEventListener(ProgressEvent.PROGRESS, loadingFun);
+				e.addEventListener(Event.COMPLETE, completeFun);
+				e.addEventListener(StyleEvent.ERROR, errorFun);
+				
+			}
+			
+			
+			
+			[Bindable]
+			private var backgroundButtons:ArrayCollection = new ArrayCollection();
+			
+			protected function backgroundService_resultHandler(event:ResultEvent):void
+			{
+				for (var i:int=0; i<event.result.item.length; i++)
+				{
+					var b:ThemeButton = new ThemeButton();
+					b.width = 152;
+					b.height = 110;
+					b.pic = event.result.item[i].pic;
+					b.background = event.result.item[i].background;
+					b.setStyle("skinClass", ThemeButtonSkin);
+					b.addEventListener(MouseEvent.CLICK, background_clickHandler);
+					backgroundButtons.addItem(b);
+				}
+			}
+			
+			protected function background_clickHandler(event:MouseEvent):void
+			{
+				var tb:ThemeButton = event.target as ThemeButton;
+				this.screenContext.raiseEvent(ScreenEvent.REPLACE_BACKGROUND, tb.background);
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<s:HTTPService url="os/themes/themes.xml" id="themesService" result="themesService_resultHandler(event)" />
+		<s:HTTPService url="os/themes/backgrounds.xml" id="backgroundService" result="backgroundService_resultHandler(event)"  />
+	</fx:Declarations>
+	
+	<s:Rect width="198" height="310">
+		<s:fill>
+			<s:LinearGradient rotation="90">
+				<s:GradientEntry color="#f1f5f8" ratio="0"/>
+				<s:GradientEntry color="#f1f5f8" ratio="0.59"/>
+				<s:GradientEntry color="#ffffff" ratio="1"/>
+			</s:LinearGradient>
+		</s:fill>
+	</s:Rect>
+	<s:Rect width="1" left="197" height="310">
+		<s:fill>
+			<s:LinearGradient rotation="90">
+				<s:GradientEntry color="#c4d2db" ratio="0"/>
+				<s:GradientEntry color="#c4d2db" ratio="0.50"/>
+				<s:GradientEntry color="#ffffff" ratio="1"/>
+			</s:LinearGradient>
+		</s:fill>
+	</s:Rect>
+	<s:Rect width="2" left="195" height="310">
+		<s:fill>
+			<s:SolidColor color="#ffffff"/>
+		</s:fill>
+	</s:Rect>
+	
+	
+	
+	<s:ButtonBar dataProvider="{viewStack}" 
+				 requireSelection="true"
+				 width="198" skinClass="net.lanelife.pc.webos.soft.theme.skins.ButtonBarSkin" />
+	
+	<mx:ViewStack id="viewStack" left="200" top="5" bottom="5" right="5" creationPolicy="all">
+		<s:NavigatorContent label="系统主题">
+			<s:Label x="14" y="7" text="单击某个主题立即更改系统外观。"/>
+			
+			<s:Group left="14" right="10" top="25" bottom="9">
+				<s:Rect left="0" right="0" top="0" bottom="0">
+					<s:stroke>
+						<s:SolidColorStroke color="#646464"/>
+					</s:stroke>
+				</s:Rect>
+				
+				<s:Scroller left="5" right="5" top="5" bottom="5">
+					<s:DataGroup left="0" top="0" bottom="0" right="0" dataProvider="{themeButtons}">
+						<s:layout>
+							<s:TileLayout/>
+						</s:layout>
+					</s:DataGroup>
+				</s:Scroller>
+				
+				
+			</s:Group>
+			
+		</s:NavigatorContent>
+		<s:NavigatorContent label="桌面背景">
+			<s:Label x="14" y="7" text="单击背景图片立即更改桌面背景。"/>
+			
+			<s:Group left="14" right="10" top="25" bottom="9">
+				<s:Rect left="0" right="0" top="0" bottom="0">
+					<s:stroke>
+						<s:SolidColorStroke color="#646464"/>
+					</s:stroke>
+				</s:Rect>
+				
+				<s:Scroller left="5" right="5" top="5" bottom="5">
+					<s:DataGroup left="0" top="0" bottom="0" right="0" dataProvider="{backgroundButtons}">
+						<s:layout>
+							<s:TileLayout/>
+						</s:layout>
+					</s:DataGroup>
+				</s:Scroller>
+				
+				
+			</s:Group>
+		</s:NavigatorContent>
+		<s:NavigatorContent label="窗口颜色">
+			<s:Label x="14" y="7" text="更改窗口、开始菜单和任务栏的颜色。"/>
+			<s:TileGroup left="14" right="10" top="35" bottom="9">
+				<theme:ColorButton chromeColor="0xb5d7fd" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0x5e8acb" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0x009fea" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0x6dc761" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0xdb4f4f" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0xff83cd" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0xa383c3" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0xa08484" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0xafafaf" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0xebebeb" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0xffc160" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+				<theme:ColorButton chromeColor="0xb3e36d" click="colorbutton_clickHandler(event)" skinClass="net.lanelife.pc.webos.soft.theme.skins.ColorButtonSkin"/>
+			</s:TileGroup>
+		</s:NavigatorContent>
+	</mx:ViewStack>
+	
+	
+</components:DesktopWindow>

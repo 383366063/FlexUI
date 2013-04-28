@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import net.lanelife.framework.os.core.ScreenContext;
+			
+			public function start(screenContext:ScreenContext, domain:ApplicationDomain):void
+			{
+				var win:TestWindow = new TestWindow();
+				win.show();
+				
+				
+			}
+		]]>
+	</fx:Script>
+</s:Module>

@@ -1,0 +1,110 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace components "net.lanelife.framework.os.components.*";
+@namespace components1 "net.lanelife.framework.catwindows.components.*";
+@namespace components2 "net.lanelife.framework.catwindows.desktop.components.*";
+@namespace utils "net.lanelife.framework.utils.*";
+
+
+mx|Menu{
+	color:#001423;
+	rollOverColor:#3f98d9;
+	textIndent:7;
+	textRollOverColor:#fefefe;
+	borderSkin:ClassReference("net.lanelife.framework.os.skins.rainbow.MenuBorderSkin");
+	separatorSkin:ClassReference("net.lanelife.framework.os.skins.rainbow.MenuSeparatorSkin");
+}
+
+s|Button {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.ButtonSkin");
+}
+
+s|TextInput {
+	font-family:宋体;
+	fontSize:12px;
+	focus-color:#85e4ff;
+	skin-class:ClassReference("net.lanelife.framework.os.skins.rainbow.TextInputSkin");
+}
+
+s|Label {
+	fontFamily:宋体;
+	fontSize:12px;
+}
+
+s|Scroller {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.ScrollerSkin");
+}
+
+s|VScrollBar {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.VScrollBarSkin");
+}
+
+s|HScrollBar {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.HScrollBarSkin");
+}
+
+
+components|ExplorerItem {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.ExplorerItemSkin");
+}
+
+components|ScreenNavigator {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.ScreenNavigatorSkin");
+}
+
+components|ScreenNavigatorButton {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.ScreenNavigatorButtonSkin");
+}
+
+components1|Window {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.WindowSkin");
+}
+
+components2|TaskbarButton {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.TaskbarButtonSkin");
+}
+
+components|TaskbarContainer {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.TaskbarContainerSkin");
+}
+
+components|TaskbarButtonContainerScroller {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.TaskbarButtonContainerScrollerSkin");
+}
+
+components|StartButton {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.StartButtonSkin");
+}
+
+utils|ProgressBar {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.ProgressBarSkin");
+}
+
+components|TrayIconContainerArrowButton {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.TrayIconContainerArrowButtonSkin");
+}
+
+components|TrayIconPopUpContainer {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.TrayIconPopUpContainerSkin");
+}
+
+components1|TrayIcon {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.TrayIconSkin");
+}
+
+components1|MessageBox {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.MessageBoxSkin");
+}
+
+components|FullScreenButton {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.FullScreenButtonSkin");
+}
+
+components|StartMenu {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.StartMenuSkin");
+}
+
+components|StartMenuButton {
+	skinClass:ClassReference("net.lanelife.framework.os.skins.rainbow.StartMenuButtonSkin");
+}

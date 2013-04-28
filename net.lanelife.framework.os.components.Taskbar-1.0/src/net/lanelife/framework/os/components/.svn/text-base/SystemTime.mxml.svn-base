@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 creationComplete="init(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			private var timer:Timer = new Timer(1000);
+			
+			protected function init(event:FlexEvent):void
+			{
+				timer.addEventListener(TimerEvent.TIMER, onTimer);
+				timer.start();
+			}
+			
+			private function onTimer(event:TimerEvent):void
+			{
+				datetime.text = dateFormat.format(new Date());
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<mx:DateFormatter id="dateFormat" formatString="YYYY-MM-DD JJ:NN:SS" />
+	</fx:Declarations>
+	
+	<s:Label id="datetime" color="#ffffff" text="{dateFormat.format(new Date())}" verticalCenter="0" />
+	
+</s:Group>

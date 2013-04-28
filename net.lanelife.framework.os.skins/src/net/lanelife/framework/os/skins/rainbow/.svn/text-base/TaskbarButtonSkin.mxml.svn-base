@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx"
+		width="120" height="34">
+	<!-- host component -->
+	<fx:Metadata>
+		[HostComponent("net.lanelife.framework.catwindows.desktop.components.TaskbarButton")]
+	</fx:Metadata>
+	
+	<!-- states -->
+	<s:states>
+		<s:State name="disabled" />
+		<s:State name="down" />
+		<s:State name="over" />
+		<s:State name="up" />
+		<s:State name="activated" />
+		<s:State name="flashes" />
+	</s:states>
+	
+	<s:Rect top="3" bottom="2" left="0" right="0" radiusX="1">
+		<s:fill>
+			<s:SolidColor color="#e88f48" alpha="0" alpha.flashes="1" />
+		</s:fill>
+	</s:Rect>
+	
+	<s:Rect top="3" bottom="2" left="0" right="0" radiusX="1">
+		<s:stroke>
+			<s:SolidColorStroke color="#000000" alpha="0.40" weight="1" caps="square" />
+		</s:stroke>
+	</s:Rect>
+	
+	<s:Rect height="14" left="1" top="4" right="1" topLeftRadiusX="1" topRightRadiusX="1">
+		<s:fill>  
+			<s:LinearGradient rotation="90">  
+				<s:entries>  
+					<s:GradientEntry color="#ffffff" alpha="0.3" alpha.activated="0.6" alpha.over="0.6" />  
+					<s:GradientEntry color="#ffffff" alpha="0.1" alpha.activated="0.3" alpha.over="0.3" />
+				</s:entries>  
+			</s:LinearGradient>  
+		</s:fill>
+	</s:Rect>
+	<s:Rect height="13" left="1" bottom="3" right="1" alpha="0.04" alpha.activated="0.3" alpha.over="0.2" bottomLeftRadiusX="1" bottomRightRadiusX="1">
+		<s:fill>
+			<s:SolidColor color="#ffffff"/>
+		</s:fill>
+	</s:Rect>
+	
+	<s:Rect left="1" top="4" right="1" bottom="3" radiusX="1">
+		<s:stroke>
+			<s:LinearGradientStroke rotation="90">
+				<s:entries>  
+					<s:GradientEntry color="#ffffff" alpha="0.6" alpha.activated="0.7" alpha.over="0.7" />  
+					<s:GradientEntry color="#ffffff" alpha="0.5" alpha.activated="0.6" alpha.over="0.6" />
+				</s:entries>  
+			</s:LinearGradientStroke>  
+		</s:stroke>
+	</s:Rect>
+	
+	<s:Group width="120" height="34">
+		<s:HGroup left="8" right="8" gap="5" verticalCenter="0">
+			<s:Image id="iconImage" width="22" height="22" />
+			<s:Label id="labelDisplay"
+					 width="77" height="22"
+					 maxDisplayedLines="1"
+					 verticalAlign="middle"
+					 fontFamily="宋体" color="#ffffff">
+			</s:Label>
+		</s:HGroup>
+	</s:Group>
+	
+	
+</s:Skin>
