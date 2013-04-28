@@ -1,0 +1,14 @@
+﻿<item>
+	<name>主题设置</name>
+	<winTitle>主题设置</winTitle>
+	<module>net/lanelife/soft/webos/theme/Theme.swf</module>
+</item>
+<item>
+	<name>帮助和支持</name>
+	<winTitle>帮助和支持</winTitle>
+	<module>net/lanelife/soft/webos/help/HelpWindow.swf</module>
+</item>
+<item>
+	<name>关于</name>
+	<module>net/lanelife/soft/webos/about/AboutWindow.swf</module>
+</item>

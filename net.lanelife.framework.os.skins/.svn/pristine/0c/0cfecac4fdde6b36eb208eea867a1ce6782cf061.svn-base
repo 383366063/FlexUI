@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+This file is part of LANE WEBOS
+
+Copyright (c) 2011 LANE WEBOS
+
+Contact:  http://www.lanelife.org/contact
+
+GNU General Public License Usage
+This file may be used under the terms of the GNU General Public License version 2.0 as published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.  Please review the following information to ensure the GNU General Public License version 2.0 requirements will be met: http://www.gnu.org/copyleft/gpl.html.
+
+If you are unsure which license is appropriate for your use, please contact the sales department at http://www.lanelife.org/contact.
+
+-->
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx">
+	<!-- host component -->
+	<fx:Metadata>
+		[HostComponent("spark.components.Button")]
+	</fx:Metadata>
+	
+	<!-- states -->
+	<s:states>
+		<s:State name="disabled" />
+		<s:State name="down" />
+		<s:State name="over" />
+		<s:State name="up" />
+	</s:states>
+	
+	<s:transitions>
+		<s:Transition fromState="*" toState="up">
+			<s:Fade alphaFrom="1" alphaTo="0" target="{glow}" duration="200"/>
+		</s:Transition>
+	</s:transitions>
+	
+	<s:filters>
+		<s:GlowFilter id="glow" blurX="10" blurY="10" quality="3" color="#16fcfa" alpha="0" alpha.over="1" alpha.down="1"/>
+	</s:filters>
+	
+	<s:Rect left="0" top="0" right="0" bottom="0">  
+		<s:stroke>
+			<s:SolidColorStroke color="#edf5fd" color.over="#ade3fc" color.down="#ade3fc" alpha="0.6"/>
+		</s:stroke>
+	</s:Rect> 
+	
+	<s:Rect left="0" top="0" right="0" bottom="1">  
+		<s:stroke>
+			<s:SolidColorStroke color="#535c66" color.over="#1e415e" color.down="#132333"/>
+		</s:stroke>
+	</s:Rect> 
+	
+	<s:Rect left="1" top="0" right="0" bottom="2">  
+		<s:fill>  
+			<s:LinearGradient rotation="90">  
+				<s:entries>  
+					<s:GradientEntry color="#eff4fa" color.over="#cbe3f0" color.down="#bcceda" ratio="0" />  
+					<s:GradientEntry color="#e1e9f1" color.over="#b0d1e6" color.down="#9eb6c9" ratio="0.45" />  
+					<s:GradientEntry color="#cdd9e4" color.over="#71a5ca" color.down="#6c7e91" ratio="0.45" />  
+					<s:GradientEntry color="#e0ebf7" color.over="#16fcfa" color.down="#7aefef" ratio="1" />  
+				</s:entries>  
+			</s:LinearGradient>  
+		</s:fill>
+	</s:Rect> 
+	
+	<s:Rect left="2" top="0" right="1" bottom="3">  
+		<s:fill>  
+			<s:LinearGradient rotation="90">  
+				<s:entries>  
+					<s:GradientEntry color="#e4eef8" color.over="#b5d9f3" color.down="#9cb8ca" ratio="0" />  
+					<s:GradientEntry color="#cddae7" color.over="#87b8db" color.down="#567f9d" ratio="0.5" />  
+					<s:GradientEntry color="#a8bbcf" color.over="#2b7fb6" color.down="#0e3251" ratio="0.5" />  
+					<s:GradientEntry color="#bacce4" color.over="#30d5e4" color.down="#1b9ca9" ratio="1" />  
+				</s:entries>  
+			</s:LinearGradient>  
+		</s:fill>
+	</s:Rect> 
+	<s:Line left="1" right="0">
+		<s:stroke>
+			<s:SolidColorStroke color="#fcfcfc" />
+		</s:stroke>
+	</s:Line>
+	
+	<s:Path data="M0 2 9 2 9 11 0 11ZM3 5 6 5 6 8 3 8ZM2 1 2 0 11 0 11 9 9 9 9 2 2 2Z" left="7" top="3">
+		<s:stroke>
+			<s:SolidColorStroke color="#535666"/>
+		</s:stroke>
+		<s:fill>
+			<s:SolidColor color="#eeeeee" />
+		</s:fill>
+	</s:Path>
+	
+</s:Skin>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+This file is part of LANE WEBOS
+
+Copyright (c) 2011 LANE WEBOS
+
+Contact:  http://www.lanelife.org/contact
+
+GNU General Public License Usage
+This file may be used under the terms of the GNU General Public License version 2.0 as published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.  Please review the following information to ensure the GNU General Public License version 2.0 requirements will be met: http://www.gnu.org/copyleft/gpl.html.
+
+If you are unsure which license is appropriate for your use, please contact the sales department at http://www.lanelife.org/contact.
+
+-->
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" creationComplete="init()">
+	
+	<fx:Script>
+		<![CDATA[
+			public var screenContext:ScreenContext;
+			
+			public function addScreenContainer():void
+			{
+				screenContext.screenContainer = this;
+			}
+			
+			[Bindable]
+			private var screenBackground:Object;
+			
+			protected function init():void
+			{
+				screenContext.observer(ScreenEvent.REPLACE_BACKGROUND, replaceScreenBackground);
+				replaceScreenBackground("os/themes/backgrounds/1.jpg");
+			}
+			
+			public function replaceScreenBackground(url:String):void
+			{
+				var loader:Loader = new Loader();
+				
+				messageLabel.text = "正在加载桌面背景...";
+				percentLabel.text = "0%";
+				percentLabel.visible = true;
+				
+				var loadingFun:Function=function(e:ProgressEvent):void{
+					var per:uint = Math.ceil(e.bytesLoaded/e.bytesTotal*100); 
+					percentLabel.text = per.toString() + "%";
+				};
+				
+				var errorFun:Function=function(ee:IOErrorEvent):void{
+					ee.currentTarget.removeEventListener(Event.COMPLETE,completeFun);
+					ee.currentTarget.removeEventListener(ProgressEvent.PROGRESS,loadingFun);
+					ee.currentTarget.removeEventListener(IOErrorEvent.IO_ERROR,errorFun);
+					messageLabel.text = "桌面背景加载失败";
+					percentLabel.visible = false;
+					hideLoading();
+				};
+				
+				var completeFun:Function=function(ce:Event):void{
+					screenBackground = ce.target.content;
+					ce.currentTarget.removeEventListener(Event.COMPLETE,completeFun);
+					ce.currentTarget.removeEventListener(ProgressEvent.PROGRESS,loadingFun);
+					ce.currentTarget.removeEventListener(IOErrorEvent.IO_ERROR,errorFun);
+					loader = null;
+					messageLabel.text = "桌面背景更换成功";
+					percentLabel.visible = false;
+					hideLoading();
+				};
+				
+				loader.contentLoaderInfo.addEventListener(Event.COMPLETE, completeFun);
+				loader.contentLoaderInfo.addEventListener(ProgressEvent.PROGRESS, loadingFun);
+				loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, errorFun);
+				
+				loader.load(new URLRequest(url));
+				showLoading();
+			}
+			
+			private function hideLoading():void
+			{
+				loadingShow.stop();
+				loadingHide.play();
+			}
+			private function showLoading():void
+			{
+				loadingHide.stop();
+				loadingShow.play();
+			}
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<s:Fade id="loadingHide" alphaFrom="1" alphaTo="0" duration="6000" target="{loading}"/>
+		<s:Fade id="loadingShow" alphaFrom="0" alphaTo="1" duration="2000" target="{loading}"/>
+	</fx:Declarations>
+	<s:Rect left="0" right="0" top="0" bottom="0">
+		<s:fill>
+			<s:LinearGradient rotation="30">
+				<s:GradientEntry color="#185d9b" ratio="0" />
+				<s:GradientEntry color="#85d7ee" ratio="0.6" />
+				<s:GradientEntry color="#85d7ee" ratio="1" />
+			</s:LinearGradient>
+		</s:fill>
+	</s:Rect>
+	
+	<s:Rect left="0" right="0" top="0" bottom="0">
+		<s:fill>
+			<s:BitmapFill source="{screenBackground}" smooth="true"/>
+		</s:fill>
+	</s:Rect>
+	
+	<s:Group id="loading" right="10" top="10" width="200" height="20" alpha="0">
+		<s:Rect left="0" right="0" top="0" bottom="0" radiusX="3">
+			<s:fill>
+				<s:SolidColor color="#000000" alpha="0.2"/>
+			</s:fill>
+		</s:Rect>
+		<s:Label id="messageLabel" text="正在加载桌面背景..." verticalCenter="0" left="10" color="#ffffff"/>
+		<s:Label id="percentLabel" text="0%" verticalCenter="0" right="10" color="#ffffff"/>
+	</s:Group>
+	
+	
+</s:Group>

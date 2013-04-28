@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 xmlns:components="net.lanelife.framework.catwindows.components.*"
+		 xmlns:containers="net.lanelife.framework.catwindows.containers.*"
+		 creationComplete="init(event)" >
+	<fx:Script>
+		<![CDATA[
+			import mx.core.FlexGlobals;
+			import mx.events.FlexEvent;
+			import mx.managers.PopUpManager;
+			
+			import net.lanelife.framework.catwindows.core.SystemVariables;
+			
+			[Bindable]
+			public var startMenuMenuServiceUrl:String;
+			
+			private var timer:Timer = new Timer(1000);
+			
+			protected function init(event:FlexEvent):void
+			{
+				timer.addEventListener(TimerEvent.TIMER, onTimer);
+				timer.start();
+			}
+			
+			private function onTimer(event:TimerEvent):void
+			{
+				datetime.text = dateFormat.format(new Date());
+			}
+			
+			
+			protected function startMenu_hiddenStartMenuHandler(event:Event):void
+			{
+				startButton.selected = false;
+				StartButton.display = false;
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<mx:DateFormatter id="dateFormat" formatString="YYYY-MM-DD JJ:NN:SS" />
+	</fx:Declarations>
+	
+	<s:PopUpAnchor id="popUpAnchor" displayPopUp="{startButton.selected}" popUpPosition="below">
+		<components:StartMenu id="startMenu" menuServiceUrl="{startMenuMenuServiceUrl}" hiddenStartMenu="startMenu_hiddenStartMenuHandler(event)" />
+	</s:PopUpAnchor>
+	
+	
+	
+	<components:StartButton id="startButton"/>
+	
+	
+	<mx:HBox left="70" right="150" height="100%">
+		<mx:Repeater id="r" dataProvider="{SystemVariables.taskbarButtonContainers}">
+			
+			<containers:TaskbarButtonContainer containerIndex="{r.currentIndex}" 
+											   height="100%" width="100%"
+											   visible="{SystemVariables.currentDesktopScreenIndex==r.currentIndex?true:false}" 
+											   includeInLayout="{SystemVariables.currentDesktopScreenIndex==r.currentIndex?true:false}"/>
+			
+		</mx:Repeater>
+		<containers:TrayIconContainer height="100%" />
+	</mx:HBox>
+	
+
+	<s:Label id="datetime" color="#ffffff" text="{dateFormat.format(new Date())}" verticalCenter="0" right="25" />
+	
+</s:SkinnableContainer>

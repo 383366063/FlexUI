@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 creationComplete="init(event)" 
+		 xmlns:components="net.lanelife.framework.catwindows.components.*" 
+		 xmlns:containers="net.lanelife.framework.catwindows.containers.*" 
+		 xmlns:components1="net.lanelife.webos.components.*">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			import net.lanelife.framework.catwindows.core.SystemContext;
+			import net.lanelife.framework.catwindows.core.SystemVariables;
+			import net.lanelife.framework.catwindows.events.DesktopContextEvent;
+			import net.lanelife.framework.catwindows.utils.LoaderUtil;
+			import net.lanelife.framework.catwindows.utils.ProgressBar;
+			
+			[Bindable]
+			private var desktopBackground:Object;
+			
+			protected function init(event:FlexEvent):void
+			{
+				SystemContext.instance.observer(DesktopContextEvent.REPLACE_BACKGROUND, replaceBackground);
+				SystemContext.instance.raiseEventAndRun(DesktopContextEvent.REPLACE_BACKGROUND, "os/themes/backgrounds/1.jpg");
+				
+			}
+			
+			private function replaceBackground(url:String):void
+			{
+				LoaderUtil.load([{url:url, text:"背景"}],new ProgressBar(),function(count:int,url:String,byte:Object):void{
+					desktopBackground = byte;
+				})
+				
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	
+	
+	
+	<s:Rect width="100%" height="100%">
+		<s:fill>
+			<s:BitmapFill source="{desktopBackground}" smooth="true"/>
+		</s:fill>
+	</s:Rect>
+	
+	<mx:Canvas left="5" top="5" right="5" bottom="45">
+		<mx:Repeater id="der" dataProvider="{SystemVariables.windowsContainers}">
+			
+			<components1:DesktopExplorer height="100%" width="100%"
+										 serviceUrl="os/users/{SystemVariables.systemUser.username}/desktop/{der.currentIndex}/items.xml"
+										 visible="{SystemVariables.currentDesktopScreenIndex==der.currentIndex?true:false}" 
+										 includeInLayout="{SystemVariables.currentDesktopScreenIndex==der.currentIndex?true:false}"/>
+			
+		</mx:Repeater>
+	</mx:Canvas>
+	
+	<mx:Canvas left="0" top="0" right="0" bottom="40">
+		<mx:Repeater id="r" dataProvider="{SystemVariables.windowsContainers}">
+			
+			<containers:WindowsContainer containerIndex="{r.currentIndex}" height="100%" width="100%"
+											   visible="{SystemVariables.currentDesktopScreenIndex==r.currentIndex?true:false}" 
+											   includeInLayout="{SystemVariables.currentDesktopScreenIndex==r.currentIndex?true:false}"/>
+			
+		</mx:Repeater>
+	</mx:Canvas>
+	
+	<components:Taskbar startMenuMenuServiceUrl="os/users/{SystemVariables.systemUser.username}/startmenu/menu/items.xml" left="0" right="0" bottom="0"/>
+	
+	<components:DesktopNavigator quantity="5" selectedIndex="2" horizontalCenter="0" top="10"/>
+	
+	
+</s:Group>

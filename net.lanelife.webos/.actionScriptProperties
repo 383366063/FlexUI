@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<actionScriptProperties analytics="false" mainApplicationPath="Main.mxml" projectUUID="894b472c-c523-4249-b50d-c53ecb887158" version="10">
+  <compiler additionalCompilerArguments="-locale en_US -keep-all-type-selectors" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" removeUnusedRSL="true" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+    <compilerSourcePath/>
+    <libraryPath defaultLinkType="0">
+      <libraryPathEntry kind="4" path="">
+        <excludedEntries>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/flex.swc" useDefaultLinkType="false"/>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/core.swc" useDefaultLinkType="false"/>
+        </excludedEntries>
+      </libraryPathEntry>
+      <libraryPathEntry kind="1" linkType="1" path="libs"/>
+      <libraryPathEntry kind="3" linkType="1" path="/net.lanelife.framework.catwindows-2.0/bin/net.lanelife.framework.catwindows-2.0.swc" useDefaultLinkType="false"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="Main.mxml"/>
+  </applications>
+  <modules>
+    <module application="src/Main.mxml" destPath="net/lanelife/webos/soft/login/Login.swf" optimize="false" sourcePath="src/net/lanelife/webos/soft/login/Login.mxml"/>
+    <module application="src/Main.mxml" destPath="net/lanelife/webos/soft/test/TestWindow.swf" optimize="false" sourcePath="src/net/lanelife/webos/soft/test/TestWindow.mxml"/>
+    <module application="src/Main.mxml" destPath="net/lanelife/webos/soft/about/AboutWindow.swf" optimize="false" sourcePath="src/net/lanelife/webos/soft/about/AboutWindow.mxml"/>
+    <module application="src/Main.mxml" destPath="net/lanelife/webos/soft/help/HelpWindow.swf" optimize="false" sourcePath="src/net/lanelife/webos/soft/help/HelpWindow.mxml"/>
+    <module application="src/Main.mxml" destPath="net/lanelife/webos/soft/notepad/NotepadWindow.swf" optimize="false" sourcePath="src/net/lanelife/webos/soft/notepad/NotepadWindow.mxml"/>
+    <module application="src/Main.mxml" destPath="net/lanelife/webos/soft/theme/ThemeWindow.swf" optimize="false" sourcePath="src/net/lanelife/webos/soft/theme/ThemeWindow.mxml"/>
+  </modules>
+  <buildCSSFiles/>
+  <flashCatalyst validateFlashCatalystCompatibility="false"/>
+</actionScriptProperties>

@@ -1,0 +1,84 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace components "net.lanelife.framework.catwindows.components.*";
+@namespace utils "net.lanelife.framework.catwindows.utils.*";
+@namespace containers "net.lanelife.framework.catwindows.containers.*";
+
+components|Window {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.WindowSkin");
+}
+
+components|TaskbarButton {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.TaskbarButtonSkin");
+}
+
+components|DesktopNavigator {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.DesktopNavigatorSkin");
+}
+
+components|DesktopNavigatorButton {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.DesktopNavigatorButtonSkin")
+}
+
+components|Taskbar {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.TaskbarSkin");
+}
+
+components|StartButton {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.StartButtonSkin");
+}
+
+components|ExplorerItem {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.ExplorerItemSkin")
+}
+
+components|TaskbarButtonContainerScroller {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.TaskbarButtonContainerScrollerSkin");	
+}
+
+components|TrayIconContainerArrowButton {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.TrayIconContainerArrowButtonSkin");
+}
+
+containers|TrayIconPopUpContainer {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.TrayIconPopUpContainerSkin");
+}
+
+components|TrayIcon {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.TrayIconSkin");	
+}
+
+components|StartMenu {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.StartMenuSkin");
+}
+
+components|StartMenuButton {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.StartMenuButtonSkin");	
+}
+
+utils|ProgressBar {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.ProgressBarSkin");
+}
+
+mx|Menu{
+	color:#001423;
+	rollOverColor:#3f98d9;
+	textIndent:6;
+	textRollOverColor:#fefefe;
+	borderSkin:ClassReference("net.lanelife.framework.catwindows.skins.vista.MenuBorderSkin");
+	separatorSkin:ClassReference("net.lanelife.framework.catwindows.skins.vista.MenuSeparatorSkin");
+}
+
+s|Scroller {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.ScrollerSkin");
+}
+
+s|VScrollBar {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.VScrollBarSkin");
+}
+
+s|HScrollBar {
+	skinClass:ClassReference("net.lanelife.framework.catwindows.skins.vista.HScrollBarSkin");
+}
+

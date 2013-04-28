@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fxpProperties abbreviated="false" authoringTool="Flex Builder" compiles="true" parentProject="66ab68a6-b6e0-414e-9c88-7269f4180d2b" projectUUID="66ab68a6-b6e0-414e-9c88-7269f4180d2b" pureCatalystProject="false" sdkVersion="4.5.1" uuid="48ed7f20-8304-4db6-b22a-771a45cf4e07" version="15">
+  <projects/>
+  <src/>
+  <swc>
+    <linked location="sdkPlaceHolder" path="sdkPlaceHolder" position="0" uuid="48ed7f20-8304-4db6-b22a-771a45cf4e07"/>
+    <linked location="C:/Users/Lane/Adobe Flash Builder 4.5/net.lanelife.framework.catwindows-2.0/libs/PreloaderDisplay.swc" path="/libs/PreloaderDisplay.swc" position="1" uuid="48ed7f20-8304-4db6-b22a-771a45cf4e07"/>
+  </swc>
+  <misc/>
+  <theme/>
+  <mxmlFormattingPrefs groupAttributesByState="true" maxLineWidth="100" mxmlAlignAttributes="true" mxmlAttributeOrder="id,userLabel,includeIn,excludeFrom,visible,x,y,z,left,right,top,bottom,width,height,minWidth,minHeight,maxWidth,maxHeight,label" mxmlKeepAttributeValuesOrganized="true"/>
+</fxpProperties>

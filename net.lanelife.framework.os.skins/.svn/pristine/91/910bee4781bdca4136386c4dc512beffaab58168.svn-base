@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+This file is part of LANE WEBOS
+
+Copyright (c) 2011 LANE WEBOS
+
+Contact:  http://www.lanelife.org/contact
+
+GNU General Public License Usage
+This file may be used under the terms of the GNU General Public License version 2.0 as published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.  Please review the following information to ensure the GNU General Public License version 2.0 requirements will be met: http://www.gnu.org/copyleft/gpl.html.
+
+If you are unsure which license is appropriate for your use, please contact the sales department at http://www.lanelife.org/contact.
+
+-->
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx" alpha="0.6">
+	<!-- host component -->
+	<fx:Metadata>
+		[HostComponent("net.lanelife.framework.os.components.TaskbarButtonContainerVScrollBar")]
+	</fx:Metadata>
+	
+	<!-- states -->
+	<s:states>
+		<s:State name="inactive" />
+		<s:State name="disabled" />
+		<s:State name="normal" />
+	</s:states>
+	
+	
+	<s:Rect top="0" bottom="0" width="16">
+		<s:stroke>
+			<s:SolidColorStroke color="#000000" alpha="0.40" weight="1" caps="square" />
+		</s:stroke>
+	</s:Rect>
+	
+	<s:Rect height="50%" left="2" top="2" right="2">
+		<s:fill>  
+			<s:LinearGradient rotation="90">  
+				<s:entries>  
+					<s:GradientEntry color="#ffffff" alpha="0.3" />  
+					<s:GradientEntry color="#ffffff" alpha="0.1" />
+				</s:entries>  
+			</s:LinearGradient>  
+		</s:fill>
+	</s:Rect>
+	<s:Rect height="50%" left="2" bottom="2" right="2" alpha="0.04">
+		<s:fill>
+			<s:SolidColor color="#ffffff"/>
+		</s:fill>
+	</s:Rect>
+	
+	<s:Rect left="1" top="1" right="1" bottom="1">
+		<s:stroke>
+			<s:LinearGradientStroke rotation="90">
+				<s:entries>  
+					<s:GradientEntry color="#ffffff" alpha="0.6" />  
+					<s:GradientEntry color="#ffffff" alpha="0.5" />
+				</s:entries>  
+			</s:LinearGradientStroke>  
+		</s:stroke>
+	</s:Rect>
+	
+	<s:Button id="decrementButton"
+			  enabled.inactive="false" focusEnabled="false" 
+			  skinClass="net.lanelife.framework.os.skins.rainbow.TaskbarButtonContainerVScrollBarDecrementButtonSkin" />
+	
+	<s:Button id="incrementButton" bottom="0"
+			  enabled.inactive="false" focusEnabled="false" 
+			  skinClass="net.lanelife.framework.os.skins.rainbow.TaskbarButtonContainerVScrollBarIncrementButtonSkin" />
+	
+	<!-- SkinParts
+	name=incrementButton, type=spark.components.Button, required=false
+	name=track, type=spark.components.Button, required=false
+	name=thumb, type=spark.components.Button, required=false
+	name=decrementButton, type=spark.components.Button, required=false
+	-->
+</s:Skin>

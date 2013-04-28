@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+This file is part of LANE WEBOS
+
+Copyright (c) 2011 LANE WEBOS
+
+Contact:  http://www.lanelife.org/contact
+
+GNU General Public License Usage
+This file may be used under the terms of the GNU General Public License version 2.0 as published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.  Please review the following information to ensure the GNU General Public License version 2.0 requirements will be met: http://www.gnu.org/copyleft/gpl.html.
+
+If you are unsure which license is appropriate for your use, please contact the sales department at http://www.lanelife.org/contact.
+
+-->
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx">
+	<!-- host component -->
+	<fx:Metadata>
+		[HostComponent("spark.components.ButtonBar")]
+	</fx:Metadata>
+	
+	<!-- states -->
+	<s:states>
+		<s:State name="disabled" />
+		<s:State name="normal" />
+	</s:states>
+	
+	<fx:Declarations>
+		<fx:Component id="firstButton">
+			<s:ButtonBarButton width="100%" skinClass="net.lanelife.pc.webos.soft.theme.skins.ButtonBarButtonSkin" />
+		</fx:Component>
+		<fx:Component id="middleButton" >
+			<s:ButtonBarButton width="100%" skinClass="net.lanelife.pc.webos.soft.theme.skins.ButtonBarButtonSkin" />
+		</fx:Component>
+		<fx:Component id="lastButton" >
+			<s:ButtonBarButton width="100%" skinClass="net.lanelife.pc.webos.soft.theme.skins.ButtonBarButtonSkin" />
+		</fx:Component>
+	</fx:Declarations>
+	
+	<s:DataGroup id="dataGroup" width="100%" height="100%">
+		<s:layout>
+			<s:VerticalLayout gap="0" />
+		</s:layout>
+	</s:DataGroup>
+	
+	<!-- SkinParts
+	name=lastButton, type=mx.core.IFactory, required=false
+	name=firstButton, type=mx.core.IFactory, required=false
+	name=middleButton, type=mx.core.IFactory, required=true
+	name=dataGroup, type=spark.components.DataGroup, required=false
+	-->
+</s:Skin>
